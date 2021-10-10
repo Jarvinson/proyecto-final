@@ -24,13 +24,16 @@ public class Ciudad implements Serializable {
     private String nombre;
 
     @OneToMany(mappedBy = "ciudad")
+    @ToString.Exclude
     private List<Usuario> usuario;
 
     @OneToMany(mappedBy = "ciudad")
+    @ToString.Exclude
     private List<Producto> producto;
 
 
-    public Ciudad(String nombre) {
+    public Ciudad(Integer codigo, String nombre) {
+        this.codigo = codigo;
         this.nombre = nombre;
     }
 }

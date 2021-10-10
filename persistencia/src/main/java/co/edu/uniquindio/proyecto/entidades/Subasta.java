@@ -1,9 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Future;
@@ -14,6 +11,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Subasta implements Serializable {
@@ -32,5 +30,12 @@ public class Subasta implements Serializable {
     private Producto producto;
 
     @OneToMany(mappedBy = "subasta")
+    @ToString.Exclude
     private List<SubastaUsuario> subastaUsuario;
+
+    public Subasta(Integer codigo, LocalDate fechaLimite, Producto producto) {
+        this.codigo = codigo;
+        this.fechaLimite = fechaLimite;
+        this.producto = producto;
+    }
 }

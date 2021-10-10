@@ -1,9 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,6 +9,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Categoria implements Serializable {
@@ -26,4 +24,9 @@ public class Categoria implements Serializable {
 
     @ManyToMany(mappedBy = "categoria")
     private List<Producto> producto;
+
+    public Categoria(Integer codigo, String nombre) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+    }
 }

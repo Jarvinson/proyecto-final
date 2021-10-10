@@ -9,6 +9,7 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @MappedSuperclass

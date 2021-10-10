@@ -1,9 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
@@ -15,6 +12,7 @@ import java.util.Map;
 @Entity
 @Getter
 @Setter
+@ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor
 public class Producto implements Serializable {
@@ -44,9 +42,6 @@ public class Producto implements Serializable {
     @Column(nullable = false)
     private Double descuento;
 
-    @OneToMany(mappedBy = "producto")
-    private List<Comentario> comentarioList;
-
     @ManyToOne
     @JoinColumn(nullable = false)
     private Usuario vendedor;
@@ -61,19 +56,40 @@ public class Producto implements Serializable {
     @JoinColumn(nullable = false)
     private Ciudad ciudad;
 
-    @OneToMany(mappedBy = "producto")
-    private List<DetalleCompra> compra;
-
-    @OneToMany(mappedBy = "producto")
-    private List<Subasta> subasta;
-
     @ElementCollection
     @Column(nullable = false)
     private Map<String, String> imagenes;
 
     @OneToMany(mappedBy = "producto")
+    @ToString.Exclude
+    private List<Comentario> comentarioList;
+
+    @OneToMany(mappedBy = "producto")
+    @ToString.Exclude
+    private List<DetalleCompra> compra;
+
+    @OneToMany(mappedBy = "producto")
+    @ToString.Exclude
+    private List<Subasta> subasta;
+
+    @OneToMany(mappedBy = "producto")
+    @ToString.Exclude
     private List<Chat> chats;
 
-    private Integer codigoVendedor;
-
+    public Producto(Integer codigo, String nombre, Integer unidades, String descripcion, Double precio,
+                    LocalDate fechaLimite, Double descuento, Usuario vendedor, List<Usuario> usuario,
+                    List<Categoria> categoria, Ciudad ciudad, Map<String, String> imagenes) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.unidades = unidades;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.fechaLimite = fechaLimite;
+        this.descuento = descuento;
+        this.vendedor = vendedor;
+        this.usuario = usuario;
+        this.categoria = categoria;
+        this.ciudad = ciudad;
+        this.imagenes = imagenes;
+    }
 }
