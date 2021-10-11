@@ -1,9 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -15,6 +12,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Mensaje implements Serializable {
@@ -37,7 +35,11 @@ public class Mensaje implements Serializable {
     @JoinColumn(name = "codigoChat", nullable = false)
     private Chat chat;
 
-
-
-
+    public Mensaje(Integer codigo, String mensaje, String emisor, LocalDateTime fecha, Chat chat) {
+        this.codigo = codigo;
+        Mensaje = mensaje;
+        this.emisor = emisor;
+        this.fecha = fecha;
+        this.chat = chat;
+    }
 }

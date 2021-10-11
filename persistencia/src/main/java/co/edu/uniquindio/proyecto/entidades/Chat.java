@@ -1,9 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,6 +9,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Chat implements Serializable {
@@ -21,6 +19,7 @@ public class Chat implements Serializable {
     private Integer codigo;
 
     @OneToMany(mappedBy = "chat")
+    @ToString.Exclude
     private List<Mensaje> mensajes;
 
     @ManyToOne
@@ -30,4 +29,10 @@ public class Chat implements Serializable {
     @ManyToOne
     @JoinColumn(name = "codigoProducto", nullable = false)
     private Producto producto;
+
+    public Chat(Integer codigo, Usuario usuario, Producto producto) {
+        this.codigo = codigo;
+        this.usuario = usuario;
+        this.producto = producto;
+    }
 }

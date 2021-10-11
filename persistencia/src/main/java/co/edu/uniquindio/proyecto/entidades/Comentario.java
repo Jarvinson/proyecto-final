@@ -1,9 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -14,6 +11,7 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = false)
 public class Comentario implements Serializable {
@@ -43,4 +41,14 @@ public class Comentario implements Serializable {
     @JoinColumn(name = "codigoUsuario", nullable = false)
     private Usuario usuario;
 
+    public Comentario(Integer codigo, String mensaje, String respuesta, LocalDateTime fechaComentario,
+                      Integer calificacion, Producto producto, Usuario usuario) {
+        this.codigo = codigo;
+        this.mensaje = mensaje;
+        this.respuesta = respuesta;
+        this.fechaComentario = fechaComentario;
+        this.calificacion = calificacion;
+        this.producto = producto;
+        this.usuario = usuario;
+    }
 }
