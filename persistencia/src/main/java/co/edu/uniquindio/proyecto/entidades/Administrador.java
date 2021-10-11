@@ -20,5 +20,4 @@ public class Administrador extends Persona implements Serializable {
     @EqualsAndHashCode.Include
     private Integer codigo;
 
-
 }

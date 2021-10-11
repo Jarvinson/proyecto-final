@@ -14,6 +14,7 @@ import java.time.LocalDate;
 @MappedSuperclass
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @AllArgsConstructor
+@ToString
 public class Persona implements Serializable {
 
     @Id
@@ -29,4 +30,6 @@ public class Persona implements Serializable {
 
     @Column(nullable = false, length = 30)
     private String password;
+
+
 }
