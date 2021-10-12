@@ -15,7 +15,6 @@ import java.time.LocalDate;
 @MappedSuperclass
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @AllArgsConstructor
-@ToString
 public class Persona implements Serializable {
 
     @Id

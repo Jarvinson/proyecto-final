@@ -1,280 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-    <component name="AutoImportSettings">
-        <option name="autoReloadType" value="SELECTIVE" />
-    </component>
-    <component name="ChangeListManager">
-        <list default="true" id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="">
-            <<<<<<< HEAD
-            <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-            <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CategoriaRepo.java" afterDir="false" />
-            <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CiudadRepo.java" afterDir="false" />
-            <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ProductoRepo.java" afterDir="false" />
-            <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" afterDir="false" />
-            <change afterPath="$PROJECT_DIR$/persistencia/src/test/resources/data.sql" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Administrador.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/resources/application.properties" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/test/resources/libros.sql" beforeDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/test/resources/usuarios.sql" beforeDir="false" />
-            =======
-            <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Administrador.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Chat.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Compra.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/DetalleCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/DetalleCompra.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Mensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Mensaje.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Subasta.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Subasta.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/SubastaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/SubastaUsuario.java" afterDir="false" />
-            <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" afterDir="false" />
-            >>>>>>> 574ee941f2a5b5791a882098282e7916525ce881
-        </list>
-        <option name="SHOW_DIALOG" value="false" />
-        <option name="HIGHLIGHT_CONFLICTS" value="true" />
-        <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-        <option name="LAST_RESOLUTION" value="IGNORE" />
-    </component>
-    <component name="FileTemplateManagerImpl">
-        <option name="RECENT_TEMPLATES">
-            <list>
-                <option value="Enum" />
-                <option value="Class" />
-                <<<<<<< HEAD
-                <option value="package-info" />
-                =======
-                >>>>>>> 574ee941f2a5b5791a882098282e7916525ce881
-                <option value="Interface" />
-            </list>
-        </option>
-    </component>
-    <component name="Git.Settings">
-        <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    </component>
-    <component name="GitSEFilterConfiguration">
-        <file-type-list>
-            <filtered-out-file-type name="LOCAL_BRANCH" />
-            <filtered-out-file-type name="REMOTE_BRANCH" />
-            <filtered-out-file-type name="TAG" />
-            <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-        </file-type-list>
-    </component>
-    <component name="JpbToolWindowState">
-        <option name="myId2FirstActivated">
-            <map>
-                <entry key="JPA Inspector" value="true" />
-                <entry key="JPA Palette" value="true" />
-                <entry key="JPA Structure" value="true" />
-            </map>
-        </option>
-        <option name="myId2Visible">
-            <map>
-                <entry key="JPA Inspector" value="true" />
-                <entry key="JPA Palette" value="true" />
-                <entry key="JPA Structure" value="false" />
-            </map>
-        </option>
-    </component>
-    <component name="ProjectId" id="1yMgB2M1cZzbI0PC7DK5YcZVhor" />
-    <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-    <component name="ProjectViewState">
-        <option name="hideEmptyMiddlePackages" value="true" />
-        <option name="showLibraryContents" value="true" />
-    </component>
-    <component name="PropertiesComponent">
-        <property name="RequestMappingsPanelOrder0" value="0" />
-        <property name="RequestMappingsPanelOrder1" value="1" />
-        <property name="RequestMappingsPanelWidth0" value="75" />
-        <property name="RequestMappingsPanelWidth1" value="75" />
-        <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-        <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-        <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-        <property name="WebServerToolWindowFactoryState" value="false" />
-        <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-        <property name="project.structure.last.edited" value="Modules" />
-        <property name="project.structure.proportion" value="0.0" />
-        <property name="project.structure.side.proportion" value="0.0" />
-        <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    </component>
-    <component name="RecentsManager">
-        <key name="CopyFile.RECENT_KEYS">
-            <recent name="C:\Users\Jarvinson\Documents\ING\VIII" />
-        </key>
-    </component>
-    <component name="RunManager" selected="Spring Boot.PersistenciaApplication">
-        <configuration name="PersistenciaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-            <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.PersistenciaApplication" />
-            <module name="persistencia" />
-            <extension name="coverage">
-                <pattern>
-                    <option name="PATTERN" value="co.edu.uniquindio.proyecto.*" />
-                    <option name="ENABLED" value="true" />
-                </pattern>
-            </extension>
-            <method v="2">
-                <option name="Make" enabled="true" />
-            </method>
-        </configuration>
-        <configuration name="LibroTest.acutalizarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-            <module name="persistencia" />
-            <extension name="coverage">
-                <pattern>
-                    <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
-                    <option name="ENABLED" value="true" />
-                </pattern>
-            </extension>
-            <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-            <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.LibroTest" />
-            <option name="METHOD_NAME" value="acutalizarTest" />
-            <option name="TEST_OBJECT" value="method" />
-            <method v="2">
-                <option name="Make" enabled="true" />
-            </method>
-        </configuration>
-        <configuration name="LibroTest.eliminarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-            <module name="persistencia" />
-            <extension name="coverage">
-                <pattern>
-                    <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
-                    <option name="ENABLED" value="true" />
-                </pattern>
-            </extension>
-            <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-            <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.LibroTest" />
-            <option name="METHOD_NAME" value="eliminarTest" />
-            <option name="TEST_OBJECT" value="method" />
-            <method v="2">
-                <option name="Make" enabled="true" />
-            </method>
-        </configuration>
-        <configuration name="LibroTest.registrarLibrosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-            <module name="persistencia" />
-            <extension name="coverage">
-                <pattern>
-                    <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
-                    <option name="ENABLED" value="true" />
-                </pattern>
-            </extension>
-            <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-            <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.LibroTest" />
-            <option name="METHOD_NAME" value="registrarLibrosTest" />
-            <option name="TEST_OBJECT" value="method" />
-            <method v="2">
-                <option name="Make" enabled="true" />
-            </method>
-        </configuration>
-        <configuration default="true" type="JetRunConfigurationType">
-            <method v="2">
-                <option name="Make" enabled="true" />
-            </method>
-        </configuration>
-        <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-            <option name="filePath" />
-            <method v="2">
-                <option name="Make" enabled="true" />
-            </method>
-        </configuration>
-        <configuration name="PersistenciaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-            <module name="persistencia" />
-            <extension name="coverage">
-                <pattern>
-                    <option name="PATTERN" value="co.edu.uniquindio.proyecto.*" />
-                    <option name="ENABLED" value="true" />
-                </pattern>
-            </extension>
-            <option name="SPRING_BOOT_MAIN_CLASS" value="co.edu.uniquindio.proyecto.PersistenciaApplication" />
-            <method v="2">
-                <option name="Make" enabled="true" />
-            </method>
-        </configuration>
-        <recent_temporary>
-            <list>
-                <item itemvalue="Spring Boot.PersistenciaApplication" />
-                <item itemvalue="Application.PersistenciaApplication" />
-                <item itemvalue="JUnit.LibroTest.acutalizarTest" />
-                <item itemvalue="JUnit.LibroTest.eliminarTest" />
-                <item itemvalue="JUnit.LibroTest.registrarLibrosTest" />
-            </list>
-        </recent_temporary>
-    </component>
-    <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-    <component name="TaskManager">
-        <task active="true" id="Default" summary="Default task">
-            <changelist id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="" />
-            <created>1632066734036</created>
-            <option name="number" value="Default" />
-            <option name="presentableId" value="Default" />
-            <updated>1632066734036</updated>
-            <workItem from="1632066735692" duration="2561000" />
-            <workItem from="1632195461811" duration="76000" />
-            <workItem from="1632441438687" duration="2252000" />
-            <workItem from="1632597745666" duration="5191000" />
-            <workItem from="1632884314860" duration="1326000" />
-            <workItem from="1632888208589" duration="4000" />
-            <workItem from="1633045194818" duration="70000" />
-            <workItem from="1633045639495" duration="203000" />
-            <workItem from="1633045883797" duration="589000" />
-            <workItem from="1633091885043" duration="1909000" />
-            <workItem from="1633143226589" duration="3777000" />
-            <workItem from="1633212992948" duration="5592000" />
-            <workItem from="1633279402256" duration="5117000" />
-            <workItem from="1633392147171" duration="3411000" />
-            <workItem from="1633398301141" duration="1688000" />
-            <workItem from="1633794273676" duration="16298000" />
-            <workItem from="1633814046657" duration="610000" />
-            <workItem from="1633814713830" duration="885000" />
-            <<<<<<< HEAD
-            <workItem from="1633884151975" duration="678000" />
-            <workItem from="1633885361413" duration="1308000" />
-            <workItem from="1633887256378" duration="809000" />
-            <workItem from="1633972670984" duration="1685000" />
-            <workItem from="1633977375086" duration="97000" />
-            <workItem from="1633977487250" duration="414000" />
-            <workItem from="1633977965157" duration="36000" />
-            <workItem from="1633978175621" duration="28000" />
-            <workItem from="1633978220354" duration="7000" />
-            <workItem from="1633978239345" duration="1009000" />
-            <workItem from="1633981673704" duration="91000" />
-            <workItem from="1633981779844" duration="1338000" />
-            =======
-            <workItem from="1633884151975" duration="7519000" />
-            >>>>>>> 574ee941f2a5b5791a882098282e7916525ce881
-        </task>
-        <servers />
-    </component>
-    <component name="TypeScriptGeneratedFilesManager">
-        <option name="version" value="3" />
-    </component>
-    <component name="Vcs.Log.Tabs.Properties">
-        <option name="TAB_STATES">
-            <map>
-                <entry key="MAIN">
-                    <value>
-                        <State />
-                    </value>
-                </entry>
-            </map>
-        </option>
-        <option name="oldMeFiltersMigrated" value="true" />
-    </component>
-    <component name="XDebuggerManager">
-        <breakpoint-manager>
-            <breakpoints>
-                <breakpoint enabled="true" type="java-exception">
-                    <properties class="java.lang.NullPointerException" package="java.lang" />
-                    <option name="timeStamp" value="4" />
-                </breakpoint>
-            </breakpoints>
-        </breakpoint-manager>
-    </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CategoriaRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CiudadRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ProductoRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/test/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Administrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/DetalleCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/DetalleCompra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Mensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Mensaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Subasta.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Subasta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/SubastaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/SubastaUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/test/resources/libros.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/test/resources/usuarios.sql" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="package-info" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="1yMgB2M1cZzbI0PC7DK5YcZVhor" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jarvinson\Documents\ING\VIII" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.PersistenciaApplication">
+    <configuration name="PersistenciaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.PersistenciaApplication" />
+      <module name="persistencia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.proyecto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibroTest.acutalizarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="persistencia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.LibroTest" />
+      <option name="METHOD_NAME" value="acutalizarTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibroTest.eliminarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="persistencia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.LibroTest" />
+      <option name="METHOD_NAME" value="eliminarTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibroTest.registrarLibrosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="persistencia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.LibroTest" />
+      <option name="METHOD_NAME" value="registrarLibrosTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersistenciaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="persistencia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.proyecto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="co.edu.uniquindio.proyecto.PersistenciaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.PersistenciaApplication" />
+        <item itemvalue="Application.PersistenciaApplication" />
+        <item itemvalue="JUnit.LibroTest.acutalizarTest" />
+        <item itemvalue="JUnit.LibroTest.eliminarTest" />
+        <item itemvalue="JUnit.LibroTest.registrarLibrosTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="" />
+      <created>1632066734036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632066734036</updated>
+      <workItem from="1632066735692" duration="2561000" />
+      <workItem from="1632195461811" duration="76000" />
+      <workItem from="1632441438687" duration="2252000" />
+      <workItem from="1632597745666" duration="5191000" />
+      <workItem from="1632884314860" duration="1326000" />
+      <workItem from="1632888208589" duration="4000" />
+      <workItem from="1633045194818" duration="70000" />
+      <workItem from="1633045639495" duration="203000" />
+      <workItem from="1633045883797" duration="589000" />
+      <workItem from="1633091885043" duration="1909000" />
+      <workItem from="1633143226589" duration="3777000" />
+      <workItem from="1633212992948" duration="5592000" />
+      <workItem from="1633279402256" duration="5117000" />
+      <workItem from="1633392147171" duration="3411000" />
+      <workItem from="1633398301141" duration="1688000" />
+      <workItem from="1633794273676" duration="16298000" />
+      <workItem from="1633814046657" duration="610000" />
+      <workItem from="1633814713830" duration="885000" />
+      <workItem from="1633884151975" duration="678000" />
+      <workItem from="1633885361413" duration="1308000" />
+      <workItem from="1633887256378" duration="809000" />
+      <workItem from="1633972670984" duration="1685000" />
+      <workItem from="1633977375086" duration="97000" />
+      <workItem from="1633977487250" duration="414000" />
+      <workItem from="1633977965157" duration="36000" />
+      <workItem from="1633978175621" duration="28000" />
+      <workItem from="1633978220354" duration="7000" />
+      <workItem from="1633978239345" duration="1009000" />
+      <workItem from="1633981673704" duration="91000" />
+      <workItem from="1633981779844" duration="1338000" />
+      <workItem from="1633884151975" duration="7519000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
 </project>
