@@ -1,6 +1,7 @@
 package co.edu.uniquindio.proyecto.entidades;
 
 import lombok.*;
+import net.bytebuddy.implementation.bind.annotation.SuperCall;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,7 +15,10 @@ import java.util.Map;
 @ToString(callSuper = true)
 public class Usuario extends Persona implements Serializable {
 
+
+=======
     @Column(nullable = false, unique = true)
+>>>>>>> 574ee941f2a5b5791a882098282e7916525ce881
     private String username;
 
     @OneToMany(mappedBy = "usuario")
@@ -48,8 +52,13 @@ public class Usuario extends Persona implements Serializable {
     @Column(nullable = false)
     private Map<String, String> numTelefonos;
 
-    public Usuario(Integer codigo, String nombre, String email, String password, String username) {
+<<<<<<< HEAD
+    public Usuario(Integer codigo, String nombre, String email, String password, String username, Ciudad ciudad) {
         super(codigo, nombre, email, password);
         this.username = username;
+        this.ciudad = ciudad;
+=======
+
+
     }
 }
