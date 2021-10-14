@@ -15,10 +15,7 @@ import java.util.Map;
 @ToString(callSuper = true)
 public class Usuario extends Persona implements Serializable {
 
-
-
     @Column(nullable = false, unique = true)
-
     private String username;
 
     @OneToMany(mappedBy = "usuario")
@@ -52,11 +49,10 @@ public class Usuario extends Persona implements Serializable {
     @Column(nullable = false)
     private Map<String, String> numTelefonos;
 
-
-    public Usuario(Integer codigo, String nombre, String email, String password, String username, Ciudad ciudad) {
+    public Usuario(Integer codigo, String nombre, String email, String password, String username, Ciudad ciudad, Map<String, String> numTelefonos) {
         super(codigo, nombre, email, password);
         this.username = username;
         this.ciudad = ciudad;
-
+        this.numTelefonos = numTelefonos;
     }
 }
