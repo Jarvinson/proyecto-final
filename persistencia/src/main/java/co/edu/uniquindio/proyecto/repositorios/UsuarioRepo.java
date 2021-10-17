@@ -11,8 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface UsuarioRepo extends JpaRepository<Usuario, Integer> {
-
+public interface UsuarioRepo extends JpaRepository <Usuario, Integer> {
     //@Query("select u from Usuario u where u.nombre = :nombre")
     //List<Usuario> obtenerUsuariosPorNombre (String nombre);
 
@@ -20,11 +19,10 @@ public interface UsuarioRepo extends JpaRepository<Usuario, Integer> {
 
     Optional<Usuario> findByEmail(String email);
 
-   // @Query("select u from Usuario u where u.email = :email and u.password = :password")
+    // @Query("select u from Usuario u where u.email = :email and u.password = :password")
     //Optional<Usuario> verificarAutenticacion(String email, String password);
 
     Optional<Usuario> findByEmailAndPassword(String email, String password);
 
     Page<Usuario> findAll(Pageable paginador);
-
 }

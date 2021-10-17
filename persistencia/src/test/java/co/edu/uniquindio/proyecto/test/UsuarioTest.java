@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-//Esta clase contiene los metodos para realizar las pruebas unitarias al objeto usuario
+//Esta clase contiene los métodos para realizar las pruebas unitarias al objeto usuario
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class UsuarioTest {

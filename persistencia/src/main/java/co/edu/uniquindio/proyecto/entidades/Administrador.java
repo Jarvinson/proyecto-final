@@ -11,16 +11,12 @@ import java.io.Serializable;
 @Setter
 @ToString(callSuper = true)
 @NoArgsConstructor
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Administrador extends Persona implements Serializable {
 
-    @Id
-    @EqualsAndHashCode.Include
-    private Integer codigo;
 
-    public Administrador(Integer codigo, String nombre, String email, String password, Integer codigo1) {
+    public Administrador(Integer codigo, String nombre, String email, String password) {
         super(codigo, nombre, email, password);
-        this.codigo = codigo1;
     }
+
 
 }
