@@ -19,6 +19,9 @@ INSERT INTO usuario_num_telefonos VALUES (2, "3213450987", "Teléfono" );
 INSERT INTO usuario_num_telefonos VALUES (3, "3002134246", "Teléfono" );
 INSERT INTO usuario_num_telefonos VALUES (4, "3186783456", "Teléfono" );
 
+
+
+
 --Datos de registro de la tabla Categoria
 INSERT INTO categoria VALUES (1, "Alimentos y Bebidas");
 INSERT INTO categoria VALUES (2, "Bebés");
@@ -46,3 +49,10 @@ INSERT INTO comentario VALUES (2, 5, "2022/10/09", "Excelente producto", "Gracia
 INSERT INTO comentario VALUES (3, 3, "2022/10/09", "No es tal cual como en las fotos", "Gracias", 104, 4);
 INSERT INTO comentario VALUES (4, 1, "2022/10/09", "Aún no llega", "Gracias", 104, 5);
 INSERT INTO comentario VALUES (5, 4, "2022/10/09", "Buen producto", "Gracias", 103, 1);
+
+--Datos de registro de la tabla chat
+INSERT INTO chat VALUES (200, 101, 1);
+INSERT INTO chat VALUES (201, 103, 2);
+INSERT INTO chat VALUES (202, 104, 3);
+INSERT INTO chat VALUES (203, 101, 4);
+INSERT INTO chat VALUES (204, 102, 5);
