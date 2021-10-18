@@ -60,11 +60,17 @@ INSERT INTO chat VALUES (202, 104, 3);
 INSERT INTO chat VALUES (203, 101, 4);
 INSERT INTO chat VALUES (204, 102, 5);
 
---Datos de registro de la tabla Mensaje
+
 INSERT INTO mensaje VALUES (1, "Hola", "buenos dias", "Juan", "2021/10/20", 200);
 INSERT INTO mensaje VALUES (2, "Chao", "Pedro", "2021/10/20", 201);
 INSERT INTO mensaje VALUES (3, "Hasta luego", "Jhon", "2021/10/20", 202);
 INSERT INTO mensaje VALUES (4, "Adios", "Daniela", "2021/10/20", 203);
 INSERT INTO mensaje VALUES (5, "Hola", "buenas noche", "Jarvinson", "2021/10/20", 204);
+
+
+INSERT INTO subasta VALUES (300, "2022/10/19", 101);
+INSERT INTO subasta VALUES (301, "2022/04/09", 102);
+INSERT INTO subasta VALUES (302, "2022/10/22", 103);
+INSERT INTO subasta VALUES (303, "2021/11/24", 104);
 
 
