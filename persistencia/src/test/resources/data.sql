@@ -46,3 +46,10 @@ INSERT INTO comentario VALUES (2, 5, "2022/10/09", "Excelente producto", "Gracia
 INSERT INTO comentario VALUES (3, 3, "2022/10/09", "No es tal cual como en las fotos", "Gracias", 104, 4);
 INSERT INTO comentario VALUES (4, 1, "2022/10/09", "Aún no llega", "Gracias", 104, 5);
 INSERT INTO comentario VALUES (5, 4, "2022/10/09", "Buen producto", "Gracias", 103, 1);
+
+-- Datos de registro de la tabla Compra
+INSERT INTO compra VALUES (1, "2021/10/20", "Efectivo", 1);
+INSERT INTO compra VALUES (2, "2021/10/20", "Tarjeta", 2);
+INSERT INTO compra VALUES (3, "2021/10/20", "Efectivo", 3);
+INSERT INTO compra VALUES (4, "2021/10/20", "Tarjeta", 4);
+INSERT INTO compra VALUES (5, "2021/10/20", "Efectivo", 5);

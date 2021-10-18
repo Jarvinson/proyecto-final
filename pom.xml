@@ -17,8 +17,8 @@
     <packaging>pom</packaging>
     <groupId>co.edu.uniquindio</groupId>
     <artifactId>proyecto-final</artifactId>
-    <name>Proyecto final de programción avanzada</name>
-    <description>Este proyecto contiene los diferentes módulos de la aplicacón del proyecto final de programación avanzada</description>
+    <name>Proyecto final de programación avanzada</name>
+    <description>Este proyecto contiene los diferentes módulos de la aplicación del proyecto final de programación avanzada</description>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
