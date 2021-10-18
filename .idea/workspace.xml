@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/SubastaUsuarioRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/SubastaUsuarioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/DetalleCompraRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/DetalleCompraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/persistencia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/persistencia.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/SubastaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/SubastaUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/MensajeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/MensajeRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/MensajeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/MensajeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/SubastaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/SubastaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/test/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +231,7 @@
       <workItem from="1634318955758" duration="3731000" />
       <workItem from="1634322790561" duration="529000" />
       <workItem from="1634494979483" duration="9303000" />
-      <workItem from="1634516859851" duration="13070000" />
+      <workItem from="1634516859851" duration="13374000" />
     </task>
     <servers />
   </component>

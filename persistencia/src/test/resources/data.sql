@@ -31,7 +31,7 @@ INSERT INTO producto VALUES (100, "Caja por 6 cervezas", 0,  "2022/10/09", "Six 
 INSERT INTO producto VALUES (101, "Whisky Deluxe por 750 ml", 10000,  "2022/10/09", "Whisky", 125000, 20, 2, 1);
 INSERT INTO producto VALUES (102, "Celular Iphone 12 Pro Max 256Gb Oro", 100000,  "2022/10/09", "Iphone 12 Pro", 6000000, 30, 3, 2);
 INSERT INTO producto VALUES (103, "Televisor Led 165Cm 65 Pulgada", 0,  "2022/10/09", "Tv Led 65 pulgadas", 3350000, 100, 4, 1);
-INSERT INTO producto VALUES (104, "Nevecón tipo Europeo 570 Litros Bruto", 500000,  "2022/10/09", "Nevecon", 16500, 50, 5, 3);
+INSERT INTO producto VALUES (104, "Nevecón tipo Europeo 570 Litros Bruto", 500000,  "2022/10/09", "Nevecon", 5600000, 50, 5, 3);
 
 --Datos de registro de la tabla Administrador
 INSERT INTO administrador VALUES (1, "jarvinsonvalencia@gmail.com","Jarvinson Valencia", "jarvinson123");
@@ -60,7 +60,6 @@ INSERT INTO chat VALUES (202, 104, 3);
 INSERT INTO chat VALUES (203, 101, 4);
 INSERT INTO chat VALUES (204, 102, 5);
 
-
 INSERT INTO mensaje VALUES (1, "Hola, buenos dias", "Juan", "2021/10/20", 200);
 INSERT INTO mensaje VALUES (2, "Chao", "Pedro", "2021/10/20", 201);
 INSERT INTO mensaje VALUES (3, "Hasta luego", "Jhon", "2021/10/20", 202);
@@ -73,10 +72,18 @@ INSERT INTO subasta VALUES (301, "2022/04/09", 102);
 INSERT INTO subasta VALUES (302, "2022/10/22", 103);
 INSERT INTO subasta VALUES (303, "2021/11/24", 104);
 
+
 INSERT INTO subasta_usuario VALUES (1, "2022/10/19", 100000, 300, 1);
 INSERT INTO subasta_usuario VALUES (2, "2022/10/19", 200000, 301, 2);
 INSERT INTO subasta_usuario VALUES (3, "2022/10/19", 130000, 302, 3);
 INSERT INTO subasta_usuario VALUES (4, "2022/10/19", 140000, 303, 4);
 INSERT INTO subasta_usuario VALUES (5, "2022/10/19", 500000, 301, 5);
+
+INSERT INTO detalle_compra VALUES (400,16500,5,1,100);
+INSERT INTO detalle_compra VALUES (401,125000,3,2,101);
+INSERT INTO detalle_compra VALUES (402,6000000,1,3,102);
+INSERT INTO detalle_compra VALUES (403,3350000,3,4,103);
+INSERT INTO detalle_compra VALUES (404,5600000,1,5,104);
+
 
 
