@@ -10,8 +10,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@NoArgsConstructor
 public class SubastaUsuario implements Serializable {
 
     @Id
@@ -40,4 +40,5 @@ public class SubastaUsuario implements Serializable {
         this.usuario = usuario;
         this.subasta = subasta;
     }
+
 }

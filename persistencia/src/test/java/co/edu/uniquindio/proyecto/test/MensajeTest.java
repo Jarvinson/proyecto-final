@@ -73,15 +73,6 @@ public class MensajeTest {
         Assertions.assertNull(mensajeBuscado);
     }
 
-    //Función que permite realizar las pruebas unitarias para filtrar el medio de pago de las mensajes
-    @Test
-    @Sql("classpath:data.sql")
-    public void filtrarNombreTest(){
-
-        List<Mensaje> lista = mensajeRepo.findAllByMensajeContains("Hola");
-        lista.forEach(u-> System.out.println(u));
-    }
-
     //Función que permite realizar las pruebas unitarias de un paginador
     @Test
     @Sql("classpath:data.sql")
