@@ -1,6 +1,4 @@
 package co.edu.uniquindio.proyecto.repositorios;
-
-import co.edu.uniquindio.proyecto.entidades.Comentario;
 import co.edu.uniquindio.proyecto.entidades.Mensaje;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,6 +10,6 @@ import java.util.List;
 @Repository
 public interface MensajeRepo extends JpaRepository<Mensaje, Integer> {
 
-    List<Mensaje> findAllByMensajeContains(String nombre);
+    List<Mensaje> findAllByMensajeContains(String mensaje);
     Page<Mensaje> findAll(Pageable paginador);
 }

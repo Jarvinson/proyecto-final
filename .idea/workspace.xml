@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/persistencia/persistencia.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ChatRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/ChatTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/MensajeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyecto-final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.workspace.xml.swp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CiudadRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CiudadRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ComentarioRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ComentarioRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/MensajeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/MensajeRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/MensajeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/MensajeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/test/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +81,7 @@
       <recent name="C:\Users\Jarvinson\Documents\ING\VIII" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ChatTest.eliminarTest">
+  <component name="RunManager" selected="JUnit.MensajeTest.filtrarNombreTest">
     <configuration name="ChatTest.eliminarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="persistencia" />
       <extension name="coverage">
@@ -101,7 +98,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComentarioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MensajeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="persistencia" />
       <extension name="coverage">
         <pattern>
@@ -110,13 +107,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.ComentarioTest" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.MensajeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComentarioTest.comentariosPorCalificacion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MensajeTest.actualizarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="persistencia" />
       <extension name="coverage">
         <pattern>
@@ -125,14 +122,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.ComentarioTest" />
-      <option name="METHOD_NAME" value="comentariosPorCalificacion" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.MensajeTest" />
+      <option name="METHOD_NAME" value="actualizarTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompraTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MensajeTest.filtrarNombreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="persistencia" />
       <extension name="coverage">
         <pattern>
@@ -141,13 +138,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.CompraTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.MensajeTest" />
+      <option name="METHOD_NAME" value="filtrarNombreTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompraTest.registrarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MensajeTest.registrarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="persistencia" />
       <extension name="coverage">
         <pattern>
@@ -156,7 +154,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.CompraTest" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.MensajeTest" />
       <option name="METHOD_NAME" value="registrarTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -176,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MensajeTest.filtrarNombreTest" />
         <item itemvalue="JUnit.ChatTest.eliminarTest" />
-        <item itemvalue="JUnit.CompraTest" />
-        <item itemvalue="JUnit.CompraTest.registrarTest" />
-        <item itemvalue="JUnit.ComentarioTest" />
-        <item itemvalue="JUnit.ComentarioTest.comentariosPorCalificacion" />
+        <item itemvalue="JUnit.MensajeTest" />
+        <item itemvalue="JUnit.MensajeTest.actualizarTest" />
+        <item itemvalue="JUnit.MensajeTest.registrarTest" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +230,7 @@
       <workItem from="1634318955758" duration="3731000" />
       <workItem from="1634322790561" duration="529000" />
       <workItem from="1634494979483" duration="9303000" />
-      <workItem from="1634516859851" duration="6896000" />
+      <workItem from="1634516859851" duration="9175000" />
     </task>
     <servers />
   </component>

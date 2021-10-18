@@ -97,7 +97,7 @@ public class MensajeTest {
     @Test
     @Sql("classpath:data.sql")
     public void ordenarListaTest(){
-        List<Mensaje> lista = mensajeRepo.findAll(Sort.by("medioPago"));
+        List<Mensaje> lista = mensajeRepo.findAll(Sort.by("codigo"));
 
         System.out.println(lista.stream().collect(Collectors.toList()));
         //System.out.println(lista);

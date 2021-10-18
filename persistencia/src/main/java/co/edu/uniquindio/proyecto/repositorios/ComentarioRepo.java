@@ -1,6 +1,6 @@
 package co.edu.uniquindio.proyecto.repositorios;
 
-import co.edu.uniquindio.proyecto.entidades.Categoria;
+
 import co.edu.uniquindio.proyecto.entidades.Comentario;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
