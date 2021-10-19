@@ -34,7 +34,7 @@ public class Mensaje implements Serializable {
     @ManyToOne
     @JoinColumn(name = "codigoChat", nullable = false)
     private Chat chat;
-
+    // Este es el constructor de la clase Mensaje
     public Mensaje(Integer codigo, String mensaje, String emisor, LocalDateTime fecha, Chat chat) {
         this.codigo = codigo;
         Mensaje = mensaje;

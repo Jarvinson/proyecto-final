@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
+// Repositorio de la clase DetalleCompra
 public interface DetalleCompraRepo extends JpaRepository<DetalleCompra, Integer> {
     Page<DetalleCompra> findAll(Pageable paginador);
 }

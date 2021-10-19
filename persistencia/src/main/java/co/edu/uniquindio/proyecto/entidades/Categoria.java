@@ -24,7 +24,7 @@ public class Categoria implements Serializable {
 
     @ManyToMany(mappedBy = "categoria")
     private List<Producto> producto;
-
+//Este es el metodo constructor de la clase Categoria
     public Categoria(Integer codigo, String nombre) {
         this.codigo = codigo;
         this.nombre = nombre;

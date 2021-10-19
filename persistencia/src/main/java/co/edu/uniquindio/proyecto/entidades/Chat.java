@@ -12,6 +12,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+
 public class Chat implements Serializable {
 
     @Id

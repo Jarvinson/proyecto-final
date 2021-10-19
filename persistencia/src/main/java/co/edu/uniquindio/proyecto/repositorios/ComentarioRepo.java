@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
+// Repositorio de la clase Comentario
 public interface ComentarioRepo extends JpaRepository<Comentario, Integer> {
 
     @Query("SELECT c FROM Comentario c WHERE c.calificacion > :calificacionMenor AND c.calificacion < :calificacionMayor")

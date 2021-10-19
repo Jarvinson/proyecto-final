@@ -9,6 +9,7 @@ import java.util.List;
 
 
 @Repository
+// Repositorio de la clase Ciudad
 public interface CiudadRepo extends JpaRepository<Ciudad, Integer> {
 
     List<Ciudad> findAllByNombreContains(String nombre);

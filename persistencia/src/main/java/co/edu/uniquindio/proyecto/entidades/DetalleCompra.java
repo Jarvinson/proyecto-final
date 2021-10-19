@@ -31,7 +31,7 @@ public class DetalleCompra implements Serializable {
     @ManyToOne
     @JoinColumn(name = "codigoProducto",nullable = false)
     private Producto producto;
-
+    // Este es el constructor de la clase DetalleCompra
     public DetalleCompra(Integer codigo, Integer unidades, Double precioProducto, Compra compra, Producto producto) {
         this.codigo = codigo;
         this.unidades = unidades;

@@ -30,7 +30,7 @@ public class Ciudad implements Serializable {
     @OneToMany(mappedBy = "ciudad")
     @ToString.Exclude
     private List<Producto> producto;
-
+//Este es el metodo constructor de la clase ciudad
     public Ciudad(Integer codigo, String nombre) {
         this.codigo = codigo;
 

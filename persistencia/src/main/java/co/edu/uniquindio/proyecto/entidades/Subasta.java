@@ -33,6 +33,7 @@ public class Subasta implements Serializable {
     @ToString.Exclude
     private List<SubastaUsuario> subastaUsuario;
 
+    // Este es el constructor de la clase Subasta
     public Subasta(Integer codigo, LocalDate fechaLimite, Producto producto) {
         this.codigo = codigo;
         this.fechaLimite = fechaLimite;

@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
+// Repositorio de la clase Subasta
 public interface SubastaRepo extends JpaRepository<Subasta, Integer> {
     Page<Subasta> findAll(Pageable paginador);
 }

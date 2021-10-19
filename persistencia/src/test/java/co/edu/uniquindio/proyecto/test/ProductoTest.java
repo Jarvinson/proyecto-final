@@ -23,6 +23,7 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
+//Esta clase contiene los métodos para realizar las pruebas unitarias al objeto Producto
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class ProductoTest {
@@ -92,6 +93,7 @@ public class ProductoTest {
         Assertions.assertNull(productoBuscado);
     }
 
+    //Función que permite realizar las pruebas unitarias para el filtrado por nombre
     @Test
     @Sql("classpath:data.sql")
     public void filtrarNombreTest(){
@@ -100,7 +102,7 @@ public class ProductoTest {
         lista.forEach(u-> System.out.println(u));
     }
 
-
+    //Función que permite realizar las pruebas unitarias para controlar el cargado datos de los productos
     @Test
     @Sql("classpath:data.sql")
     public void paginarListaTest(){
@@ -111,6 +113,7 @@ public class ProductoTest {
         //System.out.println(lista);
     }
 
+    //Función que permite realizar las pruebas unitarias para ordenar un listado de productos
     @Test
     @Sql("classpath:data.sql")
     public void ordenarListaTest(){

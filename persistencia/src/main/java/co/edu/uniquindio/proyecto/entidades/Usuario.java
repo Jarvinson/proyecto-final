@@ -45,10 +45,11 @@ public class Usuario extends Persona implements Serializable {
     @ToString.Exclude
     private List<Chat> chats;
 
-    @ElementCollection
+    @ElementCollection //Etiqueta que permite la normalizacion del atributo telefono
     @Column(nullable = false)
     private Map<String, String> numTelefonos;
 
+    // Este es el constructor de la clase Usuario
     public Usuario(Integer codigo, String nombre, String email, String password, String username, Ciudad ciudad, Map<String, String> numTelefonos) {
         super(codigo, nombre, email, password);
         this.username = username;

@@ -40,7 +40,7 @@ public class Comentario implements Serializable {
     @ManyToOne
     @JoinColumn(name = "codigoUsuario", nullable = false)
     private Usuario usuario;
-
+// Este es el constructor de la clase Comentario
     public Comentario(Integer codigo, String mensaje, String respuesta, LocalDateTime fechaComentario,
                       Integer calificacion, Producto producto, Usuario usuario) {
         this.codigo = codigo;

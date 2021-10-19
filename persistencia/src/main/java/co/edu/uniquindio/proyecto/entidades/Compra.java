@@ -34,6 +34,7 @@ public class Compra implements Serializable {
     @ToString.Exclude
     private List<DetalleCompra> detalleCompra;
 
+    // Este es el constructor de la clase Compra
     public Compra(Integer codigo, LocalDateTime fechaCompra, String medioPago, Usuario usuario) {
         this.codigo = codigo;
         this.fechaCompra = fechaCompra;

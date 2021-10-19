@@ -21,6 +21,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+//Esta clase contiene los métodos para realizar las pruebas unitarias al objeto Administrador
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class AdministradorTest {
@@ -75,7 +76,7 @@ public class AdministradorTest {
         Assertions.assertNull(administradorBuscado);
     }
 
-    // //Función que permite realizar las pruebas unitarias para filtrar el nombre de los Administradores
+    //Función que permite realizar las pruebas unitarias para filtrar el nombre de los Administradores
     @Test
     @Sql("classpath:data.sql")
     public void filtrarNombreTest(){

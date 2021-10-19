@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
+// Repositorio de la clase  Categoria
 public interface CategoriaRepo extends JpaRepository<Categoria, Integer> {
 
     List<Categoria> findAllByNombreContains(String nombre);
