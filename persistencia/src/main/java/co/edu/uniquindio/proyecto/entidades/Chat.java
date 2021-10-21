@@ -12,6 +12,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+
 public class Chat implements Serializable {
 
     @Id
@@ -30,6 +31,7 @@ public class Chat implements Serializable {
     @JoinColumn(name = "codigoProducto", nullable = false)
     private Producto producto;
 
+    // Este es el contructor de la clase chat
     public Chat(Integer codigo, Usuario usuario, Producto producto) {
         this.codigo = codigo;
         this.usuario = usuario;

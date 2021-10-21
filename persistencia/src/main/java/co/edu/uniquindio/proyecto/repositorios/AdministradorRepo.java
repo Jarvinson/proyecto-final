@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
+// Repositorio de la clase Administrador
 public interface AdministradorRepo extends JpaRepository<Administrador, Integer> {
 
     List<Administrador> findAllByNombreContains(String nombre);

@@ -13,7 +13,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class Administrador extends Persona implements Serializable {
 
-
+//Este es el metodo constructo de la clase administrador
     public Administrador(Integer codigo, String nombre, String email, String password) {
         super(codigo, nombre, email, password);
     }

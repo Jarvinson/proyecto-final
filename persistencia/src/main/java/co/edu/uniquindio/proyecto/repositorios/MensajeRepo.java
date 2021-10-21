@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
+// Repositorio de la clase  Mensaje
 public interface MensajeRepo extends JpaRepository<Mensaje, Integer> {
 
     Page<Mensaje> findAll(Pageable paginador);

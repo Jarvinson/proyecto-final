@@ -22,6 +22,7 @@ import org.springframework.test.context.jdbc.Sql;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//Esta clase contiene los métodos para realizar las pruebas unitarias al objeto Chat
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class ChatTest {

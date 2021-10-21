@@ -33,7 +33,7 @@ public class SubastaUsuario implements Serializable {
     @JoinColumn(name = "codigoSubasta", nullable = false)
     private Subasta subasta;
 
-
+    // Este es el constructor de la clase SubastaUsuario
     public SubastaUsuario(Integer codigo, Double valor, LocalDate fechaSubasta, Usuario usuario, Subasta subasta) {
         this.codigo = codigo;
         this.valor = valor;

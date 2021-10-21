@@ -87,6 +87,7 @@ public class UsuarioTest {
         lista.forEach(u-> System.out.println(u));
     }
 
+    //Función que permite realizar las pruebas unitarias para el filtrado de email de un usuario
     @Test
     @Sql("classpath:data.sql")
     public void filtrarEmailTest(){
@@ -100,6 +101,7 @@ public class UsuarioTest {
         }
     }
 
+    //Función que permite realizar las pruebas unitarias para limitar el muestreo de usuarios en una busqueda
     @Test
     @Sql("classpath:data.sql")
 
@@ -111,6 +113,7 @@ public class UsuarioTest {
         //System.out.println(lista);
     }
 
+    //Función que permite realizar las pruebas unitarias para ordenar un listado de usuarios
     @Test
     @Sql("classpath:data.sql")
     public void ordenarListaTest(){

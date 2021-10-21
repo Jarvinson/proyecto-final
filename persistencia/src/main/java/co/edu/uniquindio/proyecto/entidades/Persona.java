@@ -15,6 +15,8 @@ import java.time.LocalDate;
 @MappedSuperclass
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @AllArgsConstructor
+
+// La clase persona hereda de la clase Usuario
 public class Persona implements Serializable {
 
     @Id

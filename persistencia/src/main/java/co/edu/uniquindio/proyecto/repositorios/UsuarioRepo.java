@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
+// Repositorio de la clase Usuario
 public interface UsuarioRepo extends JpaRepository <Usuario, Integer> {
     //@Query("select u from Usuario u where u.nombre = :nombre")
     //List<Usuario> obtenerUsuariosPorNombre (String nombre);

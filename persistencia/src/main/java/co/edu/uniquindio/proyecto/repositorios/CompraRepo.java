@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
+// Repositorio de la clase Compra
 public interface CompraRepo extends JpaRepository<Compra, Integer> {
     List<Compra> findAllByMedioPago(String nombre);
     Page<Compra> findAll(Pageable paginador);

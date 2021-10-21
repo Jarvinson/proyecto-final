@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
+// Repositorio de la clase Producto
 public interface ProductoRepo extends JpaRepository<Producto, Integer> {
 
     List<Producto> findAllByNombreContains(String nombre);

@@ -75,7 +75,7 @@ public class Producto implements Serializable {
     @OneToMany(mappedBy = "producto")
     @ToString.Exclude
     private List<Chat> chats;
-
+    // Este es el constructor de la clase Producto
     public Producto(Integer codigo, String nombre, Integer unidades, String descripcion, Double precio,
                     LocalDate fechaLimite, Double descuento, Usuario vendedor, List<Usuario> usuario,
                     List<Categoria> categoria, Ciudad ciudad, Map<String, String> imagenes) {

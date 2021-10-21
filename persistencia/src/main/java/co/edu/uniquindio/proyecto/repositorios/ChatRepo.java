@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
+// Repositorio de la clase Chat
 public interface ChatRepo extends JpaRepository<Chat,Integer> {
 
     Page<Chat> findAll(Pageable paginador);
