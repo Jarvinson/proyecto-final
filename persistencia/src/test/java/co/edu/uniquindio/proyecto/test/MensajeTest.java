@@ -72,7 +72,7 @@ public class MensajeTest {
         Mensaje mensajeBuscado = mensajeRepo.findById(3).orElse(null);
         Assertions.assertNull(mensajeBuscado);
     }
-    
+
     //Función que permite realizar las pruebas unitarias de un paginador
     @Test
     @Sql("classpath:data.sql")
