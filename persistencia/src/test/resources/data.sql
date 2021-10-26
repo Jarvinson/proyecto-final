@@ -85,17 +85,16 @@ INSERT INTO detalle_compra VALUES (402,6000000,1,3,102);
 INSERT INTO detalle_compra VALUES (403,3350000,3,4,103);
 INSERT INTO detalle_compra VALUES (404,5600000,1,1,104);
 
-INSERT INTO producto_usuario VALUES (100, 1);
-INSERT INTO producto_usuario VALUES (101, 2);
-INSERT INTO producto_usuario VALUES (102, 3);
-INSERT INTO producto_usuario VALUES (103, 4);
-
-
 INSERT  INTO producto_categoria VALUES (100, 1);
 INSERT  INTO producto_categoria VALUES (101, 1);
 INSERT  INTO producto_categoria VALUES (102, 5);
 INSERT  INTO producto_categoria VALUES (103, 5);
 INSERT  INTO producto_categoria VALUES (104, 5);
+
+INSERT INTO usuario_productos_favoritos VALUES (1, 100);
+INSERT INTO usuario_productos_favoritos VALUES (2, 101);
+INSERT INTO usuario_productos_favoritos VALUES (1, 103);
+INSERT INTO usuario_productos_favoritos VALUES (4, 101);
 
 
 

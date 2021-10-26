@@ -46,8 +46,9 @@ public class Producto implements Serializable {
     @JoinColumn(nullable = false)
     private Usuario vendedor;
 
-    @ManyToMany
-    private List<Usuario> usuario;
+    @ManyToMany(mappedBy = "productosFavoritos")
+    @ToString.Exclude
+    private List<Usuario> usuarios;
 
     @ManyToMany
     private List<Categoria>categoria;
@@ -77,7 +78,7 @@ public class Producto implements Serializable {
     private List<Chat> chats;
     // Este es el constructor de la clase Producto
     public Producto(Integer codigo, String nombre, Integer unidades, String descripcion, Double precio,
-                    LocalDate fechaLimite, Double descuento, Usuario vendedor, List<Usuario> usuario,
+                    LocalDate fechaLimite, Double descuento, Usuario vendedor, List<Usuario> usuarios,
                     List<Categoria> categoria, Ciudad ciudad, Map<String, String> imagenes) {
         this.codigo = codigo;
         this.nombre = nombre;
@@ -87,7 +88,7 @@ public class Producto implements Serializable {
         this.fechaLimite = fechaLimite;
         this.descuento = descuento;
         this.vendedor = vendedor;
-        this.usuario = usuario;
+        this.usuarios = usuarios;
         this.categoria = categoria;
         this.ciudad = ciudad;
         this.imagenes = imagenes;
