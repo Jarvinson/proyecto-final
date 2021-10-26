@@ -51,7 +51,7 @@ INSERT INTO compra VALUES (1, "2021/10/20", "Efectivo", 1);
 INSERT INTO compra VALUES (2, "2021/10/20", "Tarjeta", 2);
 INSERT INTO compra VALUES (3, "2021/10/20", "Efectivo", 3);
 INSERT INTO compra VALUES (4, "2021/10/20", "Tarjeta", 4);
-INSERT INTO compra VALUES (5, "2021/10/20", "Efectivo", 5);
+INSERT INTO compra VALUES (5, "2021/10/20", "Efectivo", 1);
 
 --Datos de registro de la tabla chat
 INSERT INTO chat VALUES (200, 101, 1);
@@ -83,7 +83,20 @@ INSERT INTO detalle_compra VALUES (400,16500,5,1,100);
 INSERT INTO detalle_compra VALUES (401,125000,3,2,101);
 INSERT INTO detalle_compra VALUES (402,6000000,1,3,102);
 INSERT INTO detalle_compra VALUES (403,3350000,3,4,103);
-INSERT INTO detalle_compra VALUES (404,5600000,1,5,104);
+INSERT INTO detalle_compra VALUES (404,5600000,1,1,104);
+
+INSERT INTO producto_usuario VALUES (100, 1);
+INSERT INTO producto_usuario VALUES (101, 2);
+INSERT INTO producto_usuario VALUES (102, 3);
+INSERT INTO producto_usuario VALUES (103, 4);
+
+
+INSERT  INTO producto_categoria VALUES (100, 1);
+INSERT  INTO producto_categoria VALUES (101, 1);
+INSERT  INTO producto_categoria VALUES (102, 5);
+INSERT  INTO producto_categoria VALUES (103, 5);
+INSERT  INTO producto_categoria VALUES (104, 5);
+
 
 
 

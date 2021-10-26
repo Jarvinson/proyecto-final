@@ -33,7 +33,6 @@ public class Ciudad implements Serializable {
 //Este es el metodo constructor de la clase ciudad
     public Ciudad(Integer codigo, String nombre) {
         this.codigo = codigo;
-
         this.nombre = nombre;
     }
 }

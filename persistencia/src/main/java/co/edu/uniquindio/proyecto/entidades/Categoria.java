@@ -23,6 +23,7 @@ public class Categoria implements Serializable {
     private  String nombre;
 
     @ManyToMany(mappedBy = "categoria")
+    @ToString.Exclude
     private List<Producto> producto;
 //Este es el metodo constructor de la clase Categoria
     public Categoria(Integer codigo, String nombre) {

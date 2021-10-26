@@ -1,5 +1,7 @@
 package co.edu.uniquindio.proyecto.test;
 
+import co.edu.uniquindio.proyecto.dto.ProductoValido;
+import co.edu.uniquindio.proyecto.dto.ProductosPorUsuario;
 import co.edu.uniquindio.proyecto.entidades.Categoria;
 import co.edu.uniquindio.proyecto.entidades.Ciudad;
 import co.edu.uniquindio.proyecto.entidades.Producto;
@@ -17,9 +19,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.test.context.jdbc.Sql;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -121,5 +125,86 @@ public class ProductoTest {
 
         // System.out.println(lista.stream().collect(Collectors.toList()));
         System.out.println(lista);
+    }
+
+    @Test
+    @Sql("classpath:data.sql")
+    public void obtenerNombreVendedorTest(){
+        String nombre = productoRepo.obtenerNombreVendedor(100);
+
+        Assertions.assertEquals("Jarvinson Valencia", nombre);
+    }
+/**
+    @Test
+    @Sql("classpath:data.sql")
+    public void obtenerFavoritosUsuarioTest(){
+        List <Producto> favoritos = productoRepo.obtenerProductosFavoritos();
+        favoritos.forEach(System.out::println);
+
+        Assertions.assertEquals(1, favoritos.size());
+    }**/
+
+    @Test
+    @Sql("classpath:data.sql")
+    public void listarProductosYComentarios(){
+        List<Object[]> respuesta = productoRepo.listarProductosYComentarios();
+        respuesta.forEach(objeto -> System.out.println(objeto[0] +"-----"+objeto[1]));
+        Assertions.assertEquals(7, respuesta.size());
+    }
+
+    @Test
+    @Sql("classpath:data.sql")
+    public void listarUsuariosComentariosTest(){
+        List<Usuario> usuarios = productoRepo.listarUsuariosComentarios(100);
+        usuarios.forEach(System.out::println);
+        Assertions.assertEquals(3, usuarios);
+    }
+
+    @Test
+    @Sql("classpath:data.sql")
+    public void listarProductosValidos(){
+        List<ProductoValido> productos = productoRepo.listarProductosValidos(LocalDate.now());
+        productos.forEach(System.out::println);
+        Assertions.assertEquals(5, productos.size());
+    }
+
+    @Test
+    @Sql("classpath:data.sql")
+    public void listarProductosCategorias(){
+        List<Object[]> respuesta = productoRepo.obtenerTotalProductosPorCategoria();
+        respuesta.forEach(r -> System.out.println(r[0] +", "+ r[1]));
+
+        Assertions.assertEquals(2, respuesta.size());
+
+    }
+
+    @Test
+    @Sql("classpath:data.sql")
+    public void listarProductosSinComentarios(){
+        List<Producto> productos = productoRepo.obtenerProductosSinComentarios();
+        productos.forEach(System.out::println);
+
+        Assertions.assertTrue(productos.get(0).getCodigo()== 100 && productos.get(1).getCodigo()== 101);
+
+    }
+
+    @Test
+    @Sql("classpath:data.sql")
+    public void obtenerProductoPorNombre(){
+        List<Producto> productos = productoRepo.buscarProductoNombre("cerveza");
+        productos.forEach(System.out::println);
+    }
+
+    @Test
+    @Sql("classpath:data.sql")
+        public void obtenerProductosEnVenta(){
+        List<ProductosPorUsuario> productos = productoRepo.obtenerProductoEnVenta();
+        productos.forEach(System.out::println);
+        Long[] arrayRespuesta = new Long[productos.size()];
+
+        for (int i = 0; i<0; i++){
+            arrayRespuesta[i] = productos.get(i).getRegistro();
+        }
+        Assertions.assertArrayEquals(new Long[] {3L, 1L, 1L}, arrayRespuesta);
     }
 }

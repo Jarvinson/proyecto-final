@@ -1,6 +1,7 @@
 package co.edu.uniquindio.proyecto.test;
 
 import co.edu.uniquindio.proyecto.entidades.Compra;
+import co.edu.uniquindio.proyecto.entidades.Producto;
 import co.edu.uniquindio.proyecto.entidades.Usuario;
 import co.edu.uniquindio.proyecto.repositorios.CompraRepo;
 import co.edu.uniquindio.proyecto.repositorios.UsuarioRepo;
@@ -101,5 +102,12 @@ public class CompraTest {
 
         System.out.println(lista.stream().collect(Collectors.toList()));
         //System.out.println(lista);
+    }
+
+    @Test
+    @Sql("classpath:data.sql")
+    public void listaProductosCompradosTest(){
+        long  totalProductos = compraRepo.obtenerListaProductosComprados(1);
+        System.out.println(totalProductos);;
     }
 }

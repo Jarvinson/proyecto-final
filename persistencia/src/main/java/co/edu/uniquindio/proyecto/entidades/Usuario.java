@@ -12,7 +12,7 @@ import java.util.Map;
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString(callSuper = true)
+@ToString
 public class Usuario extends Persona implements Serializable {
 
     @Column(nullable = false, unique = true)
@@ -27,6 +27,7 @@ public class Usuario extends Persona implements Serializable {
     private List<Producto>productoList;
 
     @ManyToMany(mappedBy = "usuario")
+    @ToString.Exclude
     private List<Producto>producto;
 
     @ManyToOne

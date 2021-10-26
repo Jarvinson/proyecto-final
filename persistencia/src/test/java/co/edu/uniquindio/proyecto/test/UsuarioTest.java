@@ -1,4 +1,5 @@
 package co.edu.uniquindio.proyecto.test;
+import co.edu.uniquindio.proyecto.dto.UsuarioYProducto;
 import co.edu.uniquindio.proyecto.entidades.Ciudad;
 import co.edu.uniquindio.proyecto.entidades.Usuario;
 import co.edu.uniquindio.proyecto.repositorios.CiudadRepo;
@@ -123,4 +124,11 @@ public class UsuarioTest {
         System.out.println(lista);
     }
 
+    @Test
+    @Sql("classpath:data.sql")
+    public void listarUsuariosProducto(){
+        List<UsuarioYProducto> respuesta = usuarioRepo.listarUsuariosYProductos();
+        respuesta.forEach(System.out::println);
+        Assertions.assertEquals(5 , respuesta.size());
+    }
 }
