@@ -32,8 +32,7 @@ public class Chat implements Serializable {
     private Producto producto;
 
     // Este es el contructor de la clase chat
-    public Chat(Integer codigo, Usuario usuario, Producto producto) {
-        this.codigo = codigo;
+    public Chat(Usuario usuario, Producto producto) {
         this.usuario = usuario;
         this.producto = producto;
     }

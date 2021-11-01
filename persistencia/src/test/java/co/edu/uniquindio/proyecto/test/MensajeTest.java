@@ -37,7 +37,7 @@ public class MensajeTest {
     public void registrarTest (){
 
         Chat chat = chatRepo.findById(200).orElse(null);
-        Mensaje mensaje = new Mensaje(1, "Hola", "Juan", LocalDateTime.now(), chat );
+        Mensaje mensaje = new Mensaje("Hola", "Juan", chat );
         Mensaje mensajeGuardada = mensajeRepo.save(mensaje);
 
         Assertions.assertNotNull(mensajeGuardada);

@@ -3,6 +3,7 @@ package co.edu.uniquindio.proyecto.entidades;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.PositiveOrZero;
 import java.io.Serializable;
 
 @Entity
@@ -18,9 +19,11 @@ public class DetalleCompra implements Serializable {
     @EqualsAndHashCode.Include
     private Integer codigo;
 
+    @PositiveOrZero
     @Column(nullable = false)
     private Integer unidades;
 
+    @PositiveOrZero
     @Column(nullable = false)
     private Double precioProducto;
 
@@ -32,8 +35,7 @@ public class DetalleCompra implements Serializable {
     @JoinColumn(name = "codigoProducto",nullable = false)
     private Producto producto;
     // Este es el constructor de la clase DetalleCompra
-    public DetalleCompra(Integer codigo, Integer unidades, Double precioProducto, Compra compra, Producto producto) {
-        this.codigo = codigo;
+    public DetalleCompra(Integer unidades, Double precioProducto, Compra compra, Producto producto) {
         this.unidades = unidades;
         this.precioProducto = precioProducto;
         this.compra = compra;

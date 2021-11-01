@@ -4,7 +4,9 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -18,18 +20,22 @@ public class Comentario implements Serializable {
 
     @Id
     @Column(length = 10)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer codigo;
 
+    @NotBlank(message = "Debe ingresar un mensaje")
     @Column(nullable = false)
     private String mensaje;
 
+    @NotBlank(message = "Debe ingresar una respuesta ")
     @Column(nullable = false)
     private String respuesta;
 
     @Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime fechaComentario;
 
+    @PositiveOrZero
     @Column(nullable = false)
     private Integer calificacion;
 
@@ -40,13 +46,12 @@ public class Comentario implements Serializable {
     @ManyToOne
     @JoinColumn(name = "codigoUsuario", nullable = false)
     private Usuario usuario;
-// Este es el constructor de la clase Comentario
-    public Comentario(Integer codigo, String mensaje, String respuesta, LocalDateTime fechaComentario,
+
+    // Este es el constructor de la clase Comentario
+    public Comentario(String mensaje, String respuesta,
                       Integer calificacion, Producto producto, Usuario usuario) {
-        this.codigo = codigo;
         this.mensaje = mensaje;
         this.respuesta = respuesta;
-        this.fechaComentario = fechaComentario;
         this.calificacion = calificacion;
         this.producto = producto;
         this.usuario = usuario;

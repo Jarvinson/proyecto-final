@@ -33,7 +33,7 @@ public interface ProductoRepo extends JpaRepository<Producto, Integer> {
     List<Usuario> listarUsuariosComentarios(Integer id);
 
     @Query("select new co.edu.uniquindio.proyecto.dto.ProductoValido (p.nombre, p.descripcion, p.precio, p.ciudad)  from Producto p where :fechaActual < p.fechaLimite ")
-    List<ProductoValido> listarProductosValidos (LocalDate fechaActual);
+    List<ProductoValido> listarProductosValidos (LocalDateTime fechaActual);
 
     @Query("select c.nombre, count(p) from Producto p join p.categoria c group by c")
     List<Object[]> obtenerTotalProductosPorCategoria();

@@ -29,7 +29,7 @@ public class CiudadTest {
     //Función que permite realizar las pruebas unitarias para la de creación de Ciudades
     @Test
     public void registrarTest (){
-        Ciudad ciudad = new Ciudad(1, "Medellin");
+        Ciudad ciudad = new Ciudad("Medellin");
         Ciudad ciudadGuardada = ciudadRepo.save(ciudad);
 
         Assertions.assertNotNull(ciudadGuardada);

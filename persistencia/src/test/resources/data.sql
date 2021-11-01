@@ -27,11 +27,11 @@ INSERT INTO categoria VALUES (4, "Carros y Motos");
 INSERT INTO categoria VALUES (5, "Tecnología");
 
 --Datos de registro de la tabla producto
-INSERT INTO producto VALUES (100, "Caja por 6 cervezas", 0,  "2022/10/09", "Six Pack Poker", 16500, 50, 1, 1);
-INSERT INTO producto VALUES (101, "Whisky Deluxe por 750 ml", 10000,  "2022/10/09", "Whisky", 125000, 20, 2, 1);
-INSERT INTO producto VALUES (102, "Celular Iphone 12 Pro Max 256Gb Oro", 100000,  "2022/10/09", "Iphone 12 Pro", 6000000, 30, 3, 2);
-INSERT INTO producto VALUES (103, "Televisor Led 165Cm 65 Pulgada", 0,  "2022/10/09", "Tv Led 65 pulgadas", 3350000, 100, 4, 1);
-INSERT INTO producto VALUES (104, "Nevecón tipo Europeo 570 Litros Bruto", 500000,  "2022/10/09", "Nevecon", 5600000, 50, 5, 3);
+INSERT INTO producto VALUES (100, "Caja por 6 cervezas", 0,  "2022/10/09", "Six Pack Poker", "Cerveza", 16500, 50, 1, 1);
+INSERT INTO producto VALUES (101, "Whisky Deluxe por 750 ml", 10000,  "2022/10/09", "Whisky", "Licor", 125000, 20, 2, 1);
+INSERT INTO producto VALUES (102, "Celular Iphone 12 Pro Max 256Gb Oro", 100000,  "2022/10/09", "Iphone 12 Pro", "Celular",6000000, 30, 3, 2);
+INSERT INTO producto VALUES (103, "Televisor Led 165Cm 65 Pulgada", 0,  "2022/10/09", "Tv Led 65 pulgadas", "Tv",3350000, 100, 4, 1);
+INSERT INTO producto VALUES (104, "Nevecón tipo Europeo 570 Litros Bruto", 500000,  "2022/10/09", "Nevecon", "Nevera",5600000, 50, 5, 3);
 
 --Datos de registro de la tabla Administrador
 INSERT INTO administrador VALUES (1, "jarvinsonvalencia@gmail.com","Jarvinson Valencia", "jarvinson123");

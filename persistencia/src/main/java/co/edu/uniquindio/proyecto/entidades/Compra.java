@@ -3,6 +3,7 @@ package co.edu.uniquindio.proyecto.entidades;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -23,6 +24,7 @@ public class Compra implements Serializable {
     @Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime fechaCompra;
 
+    @NotBlank(message = "Debe ingresar un medio de pago")
     @Column(nullable = false, length = 30)
     private String medioPago;
 
@@ -35,9 +37,7 @@ public class Compra implements Serializable {
     private List<DetalleCompra> detalleCompra;
 
     // Este es el constructor de la clase Compra
-    public Compra(Integer codigo, LocalDateTime fechaCompra, String medioPago, Usuario usuario) {
-        this.codigo = codigo;
-        this.fechaCompra = fechaCompra;
+    public Compra(String medioPago, Usuario usuario) {
         this.medioPago = medioPago;
         this.usuario = usuario;
     }

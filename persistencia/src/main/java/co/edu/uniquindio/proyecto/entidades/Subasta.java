@@ -18,6 +18,7 @@ public class Subasta implements Serializable {
 
     @Id
     @Column(length = 10)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer codigo;
 
@@ -34,8 +35,7 @@ public class Subasta implements Serializable {
     private List<SubastaUsuario> subastaUsuario;
 
     // Este es el constructor de la clase Subasta
-    public Subasta(Integer codigo, LocalDate fechaLimite, Producto producto) {
-        this.codigo = codigo;
+    public Subasta(LocalDate fechaLimite, Producto producto) {
         this.fechaLimite = fechaLimite;
         this.producto = producto;
     }

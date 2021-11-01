@@ -41,7 +41,7 @@ public class DetalleCompraTest {
        
         Producto producto1 = productoRepo.findById(103).orElse(null);
         Compra  compra = compraRepo.findById(2).orElse(null);
-        DetalleCompra detalleCompra= new DetalleCompra(410,5, 34000.0,compra, producto1);
+        DetalleCompra detalleCompra= new DetalleCompra(5, 34000.0,compra, producto1);
         DetalleCompra subastaGuardada = detalleCompraRepo.save(detalleCompra);
 
         Assertions.assertNotNull(subastaGuardada);

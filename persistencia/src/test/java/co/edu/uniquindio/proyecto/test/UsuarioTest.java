@@ -40,7 +40,7 @@ public class UsuarioTest {
         telefonos.put("Telefono 1", "3007896578");
         telefonos.put("Telefono 2", "3115679809");
 
-        Usuario usuario = new Usuario(1, "Jarvinson Valencia", "jarvinsonvalencia@gmail.com", "jarvinson123", "jvalencia", ciudad, telefonos);
+        Usuario usuario = new Usuario(1, "Jarvinson Valencia", "jarvinsonvalencia@gmail.com", "jarvinson123", "jvalencia", ciudad);
         Usuario usuarioGuardado = usuarioRepo.save(usuario);
         Assertions.assertNotNull(usuarioGuardado);
 

@@ -44,7 +44,7 @@ public class ComentarioTest {
         Usuario usuario = usuarioRepo.findById(4).orElse(null);
         Producto producto = productoRepo.findById(100).orElse(null);
 
-        Comentario comentario = new Comentario(1, "Buen producto",  "Que bien", LocalDateTime.now(), 4, producto , usuario );
+        Comentario comentario = new Comentario("Buen producto",  "Que bien", 4, producto , usuario );
         Comentario comentarioGuardada = comentarioRepo.save(comentario);
 
         Assertions.assertNotNull(comentarioGuardada);

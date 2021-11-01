@@ -40,7 +40,7 @@ public class ChatTest {
     public void registrarTest (){
         Usuario user1 = usuarioRepo.findById(1).orElse(null);
         Producto producto1 = productoRepo.findById(101).orElse(null);
-        Chat chat= new Chat(200, user1, producto1);
+        Chat chat= new Chat(user1, producto1);
         Chat chatGuardada = chatRepo.save(chat);
 
         Assertions.assertNotNull(chatGuardada);

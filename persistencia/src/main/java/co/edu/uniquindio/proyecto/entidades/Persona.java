@@ -3,6 +3,8 @@ package co.edu.uniquindio.proyecto.entidades;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -24,12 +26,16 @@ public class Persona implements Serializable {
     @EqualsAndHashCode.Include
     private Integer codigo;
 
+    @NotBlank(message = "Debe ingresar el nombre de usuario")
     @Column(length = 100, nullable = false)
     private String nombre;
 
+    @Email
+    @NotBlank(message = "Debe ingresar un email")
     @Column(nullable = false, unique = true, length = 100)
     private String email;
 
+    @NotBlank(message = "Debe ingresar un password")
     @Column(nullable = false, length = 30)
     private String password;
 

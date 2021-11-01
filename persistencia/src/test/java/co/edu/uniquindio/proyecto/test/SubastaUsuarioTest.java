@@ -42,7 +42,7 @@ public class SubastaUsuarioTest {
 
         Usuario usuario = usuarioRepo.findById(1).orElse(null);
         Subasta subasta = subastaRepo.findById(300).orElse(null);
-        SubastaUsuario subastaUsuario= new SubastaUsuario(10, 100.000, LocalDate.now(), usuario, subasta);
+        SubastaUsuario subastaUsuario= new SubastaUsuario(100.000, LocalDate.now(), usuario, subasta);
         SubastaUsuario subastaGuardada = subastaUsuarioRepo.save(subastaUsuario);
 
         Assertions.assertNotNull(subastaGuardada);

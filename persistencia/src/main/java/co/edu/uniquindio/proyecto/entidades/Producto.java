@@ -3,9 +3,13 @@ package co.edu.uniquindio.proyecto.entidades;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Future;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
@@ -18,27 +22,37 @@ import java.util.Map;
 public class Producto implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, length = 10)
     @EqualsAndHashCode.Include
     private Integer codigo;
 
+    @NotBlank(message = "Debe ingresar el nombre del producto")
     @Column(nullable = false, length = 50)
     private String nombre;
 
-    @Positive
+    @NotBlank(message = "Debe ingresar el nombre de la publicación")
+    @Column(nullable = false, length = 50)
+    private String nombrePublicacion;
+
+    @PositiveOrZero
     @Column(nullable = false)
     private Integer unidades;
 
+    @Lob
+    @NotBlank(message = "Debe ingresar la descripción del producto")
     @Column(nullable = false, length = 100)
     private String descripcion;
 
-    @Positive
+    @PositiveOrZero
     @Column(nullable = false)
     private Double precio;
 
+    @Future
     @Column(nullable = false)
-    private LocalDate fechaLimite;
+    private LocalDateTime fechaLimite;
 
+    @PositiveOrZero
     @Column(nullable = false)
     private Double descuento;
 
@@ -54,7 +68,6 @@ public class Producto implements Serializable {
     private List<Categoria>categoria;
 
     @ManyToOne
-    @JoinColumn(nullable = false)
     private Ciudad ciudad;
 
     @ElementCollection
@@ -77,20 +90,16 @@ public class Producto implements Serializable {
     @ToString.Exclude
     private List<Chat> chats;
     // Este es el constructor de la clase Producto
-    public Producto(Integer codigo, String nombre, Integer unidades, String descripcion, Double precio,
-                    LocalDate fechaLimite, Double descuento, Usuario vendedor, List<Usuario> usuarios,
-                    List<Categoria> categoria, Ciudad ciudad, Map<String, String> imagenes) {
-        this.codigo = codigo;
+
+    public Producto(String nombre, String nombrePublicacion, Integer unidades, String descripcion, Double precio,
+                    LocalDateTime fechaLimite, Double descuento, Usuario vendedor) {
         this.nombre = nombre;
+        this.nombrePublicacion = nombrePublicacion;
         this.unidades = unidades;
         this.descripcion = descripcion;
         this.precio = precio;
         this.fechaLimite = fechaLimite;
         this.descuento = descuento;
         this.vendedor = vendedor;
-        this.usuarios = usuarios;
-        this.categoria = categoria;
-        this.ciudad = ciudad;
-        this.imagenes = imagenes;
     }
 }

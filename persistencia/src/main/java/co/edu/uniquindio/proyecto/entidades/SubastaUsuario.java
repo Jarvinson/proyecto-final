@@ -3,6 +3,8 @@ package co.edu.uniquindio.proyecto.entidades;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Future;
+import javax.validation.constraints.PositiveOrZero;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -19,9 +21,11 @@ public class SubastaUsuario implements Serializable {
     @EqualsAndHashCode.Include
     private Integer codigo;
 
+    @PositiveOrZero
     @Column(nullable = false)
     private Double valor;
 
+    @Future
     @Column(nullable = false)
     private LocalDate fechaSubasta;
 
@@ -34,8 +38,7 @@ public class SubastaUsuario implements Serializable {
     private Subasta subasta;
 
     // Este es el constructor de la clase SubastaUsuario
-    public SubastaUsuario(Integer codigo, Double valor, LocalDate fechaSubasta, Usuario usuario, Subasta subasta) {
-        this.codigo = codigo;
+    public SubastaUsuario(Double valor, LocalDate fechaSubasta, Usuario usuario, Subasta subasta) {
         this.valor = valor;
         this.fechaSubasta = fechaSubasta;
         this.usuario = usuario;

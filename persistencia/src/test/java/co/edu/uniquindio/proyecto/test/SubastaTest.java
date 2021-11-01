@@ -38,7 +38,7 @@ public class SubastaTest {
     public void registrarTest (){
        
         Producto producto1 = productoRepo.findById(103).orElse(null);
-        Subasta subasta= new Subasta(310, LocalDate.now(), producto1);
+        Subasta subasta= new Subasta(LocalDate.now(), producto1);
         Subasta subastaGuardada = subastaRepo.save(subasta);
 
         Assertions.assertNotNull(subastaGuardada);

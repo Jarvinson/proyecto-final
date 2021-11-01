@@ -37,7 +37,7 @@ public class CompraTest {
     public void registrarTest (){
 
         Usuario usuario = usuarioRepo.findById(1).orElse(null);
-        Compra compra = new Compra(1, LocalDateTime.now(), "Efectivo", usuario );
+        Compra compra = new Compra("Efectivo", usuario );
         Compra compraGuardada = compraRepo.save(compra);
 
         Assertions.assertNotNull(compraGuardada);

@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -22,9 +23,11 @@ public class Mensaje implements Serializable {
     @EqualsAndHashCode.Include
     private Integer codigo;
 
+    @NotBlank(message = "Debe ingresar un mensaje")
     @Column(nullable = false)
     private String Mensaje;
 
+    @NotBlank(message = "Debe ingresar un mensaje")
     @Column(nullable = false, length = 50)
     private  String emisor;
 
@@ -35,11 +38,9 @@ public class Mensaje implements Serializable {
     @JoinColumn(name = "codigoChat", nullable = false)
     private Chat chat;
     // Este es el constructor de la clase Mensaje
-    public Mensaje(Integer codigo, String mensaje, String emisor, LocalDateTime fecha, Chat chat) {
-        this.codigo = codigo;
-        Mensaje = mensaje;
+    public Mensaje(String mensaje, String emisor, Chat chat) {
+        this.Mensaje = mensaje;
         this.emisor = emisor;
-        this.fecha = fecha;
         this.chat = chat;
     }
 }

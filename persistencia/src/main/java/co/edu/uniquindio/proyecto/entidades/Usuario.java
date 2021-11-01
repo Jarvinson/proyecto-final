@@ -4,6 +4,7 @@ import lombok.*;
 import net.bytebuddy.implementation.bind.annotation.SuperCall;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,7 @@ import java.util.Map;
 @ToString
 public class Usuario extends Persona implements Serializable {
 
+    @NotBlank(message = "Debe ingresar un username")
     @Column(nullable = false, unique = true)
     private String username;
 
@@ -50,10 +52,9 @@ public class Usuario extends Persona implements Serializable {
     private Map<String, String> numTelefonos;
 
     // Este es el constructor de la clase Usuario
-    public Usuario(Integer codigo, String nombre, String email, String password, String username, Ciudad ciudad, Map<String, String> numTelefonos) {
+    public Usuario(Integer codigo, String nombre, String email, String password, String username, Ciudad ciudad) {
         super(codigo, nombre, email, password);
         this.username = username;
         this.ciudad = ciudad;
-        this.numTelefonos = numTelefonos;
     }
 }

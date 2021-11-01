@@ -19,8 +19,8 @@ public class UsuarioServicioTetst {
     private UsuarioServicio usuarioServicio;
 
     @Test
-    public void registrarTest(){
-        Usuario u = new Usuario(123, "pepito", "pepito@email.com", "12345", "pepito12", null, null);
+    public void registrarTestTest(){
+        Usuario u = new Usuario(123, "pepito", "pepito@email.com", "12345", "pepito12", null);
         try {
             Usuario respuesta = usuarioServicio.registrarUsuario(u);
             Assertions.assertNotNull(respuesta);
@@ -31,7 +31,7 @@ public class UsuarioServicioTetst {
     }
 
     @Test
-    public void eliminar(){
+    public void eliminarTest(){
         try {
             usuarioServicio.eliminarUsuario(123);
             Assertions.assertTrue(true);
@@ -42,13 +42,13 @@ public class UsuarioServicioTetst {
     }
 
     @Test
-    public void listar(){
+    public void listarTest(){
         List<Usuario> lista = usuarioServicio.listarUsuarios();
         lista.forEach(System.out::println);
     }
 
     @Test
-    public void actualizar(){
+    public void actualizarTest(){
         try {
             Usuario u = usuarioServicio.obtenerUsuario(123);
             u.setPassword("asdfr456");
@@ -56,6 +56,19 @@ public class UsuarioServicioTetst {
             Assertions.assertEquals("asdfr456", respuesta.getPassword());
         } catch (Exception e) {
             e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    public void loginTest(){
+        Usuario usuario = null;
+        try {
+            usuario = usuarioServicio.iniciarSesion("pepito@email.com", "1235");
+            Assertions.assertNotNull(usuario);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Assertions.assertTrue(false, e.getMessage());
         }
 
     }
