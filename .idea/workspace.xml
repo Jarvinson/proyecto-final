@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/negocio/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/NegocioApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicioImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/negocio/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/negocio/src/test/java/co/edu/uniquindio/proyecto/test/UsuarioServicioTetst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ProductoRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ProductoRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/UsuarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/UsuarioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +75,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -81,9 +87,9 @@
       <recent name="C:\Users\Jarvinson\Documents\ING\VIII" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsuarioTest.obtenerFavoritosUsuarioTest">
-    <configuration name="ProductoTest.listarProductosSinComentarios" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="persistencia" />
+  <component name="RunManager" selected="JUnit.UsuarioServicioTetst.actualizar">
+    <configuration name="UsuarioServicioTetst.actualizar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="negocio" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
@@ -91,15 +97,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.ProductoTest" />
-      <option name="METHOD_NAME" value="listarProductosSinComentarios" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.UsuarioServicioTetst" />
+      <option name="METHOD_NAME" value="actualizar" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductoTest.obtenerProductoPorNombre" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="persistencia" />
+    <configuration name="UsuarioServicioTetst.eliminar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="negocio" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
@@ -107,15 +113,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.ProductoTest" />
-      <option name="METHOD_NAME" value="obtenerProductoPorNombre" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.UsuarioServicioTetst" />
+      <option name="METHOD_NAME" value="eliminar" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductoTest.obtenerProductosEnVenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="persistencia" />
+    <configuration name="UsuarioServicioTetst.listar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="negocio" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
@@ -123,15 +129,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.ProductoTest" />
-      <option name="METHOD_NAME" value="obtenerProductosEnVenta" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.UsuarioServicioTetst" />
+      <option name="METHOD_NAME" value="listar" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsuarioTest.obtenerFavoritosUsuarioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="persistencia" />
+    <configuration name="UsuarioServicioTetst.registrarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="negocio" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
@@ -139,8 +145,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.UsuarioTest" />
-      <option name="METHOD_NAME" value="obtenerFavoritosUsuarioTest" />
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.UsuarioServicioTetst" />
+      <option name="METHOD_NAME" value="registrarTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,26 +163,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersistenciaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="persistencia" />
+    <configuration name="NegocioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="negocio" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="co.edu.uniquindio.proyecto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="co.edu.uniquindio.proyecto.PersistenciaApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="co.edu.uniquindio.proyecto.NegocioApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UsuarioTest.obtenerFavoritosUsuarioTest" />
-        <item itemvalue="Spring Boot.PersistenciaApplication" />
-        <item itemvalue="JUnit.ProductoTest.obtenerProductosEnVenta" />
-        <item itemvalue="JUnit.ProductoTest.obtenerProductoPorNombre" />
-        <item itemvalue="JUnit.ProductoTest.listarProductosSinComentarios" />
+        <item itemvalue="JUnit.UsuarioServicioTetst.actualizar" />
+        <item itemvalue="JUnit.UsuarioServicioTetst.listar" />
+        <item itemvalue="JUnit.UsuarioServicioTetst.eliminar" />
+        <item itemvalue="JUnit.UsuarioServicioTetst.registrarTest" />
+        <item itemvalue="Spring Boot.NegocioApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -236,6 +242,7 @@
       <workItem from="1634603026970" duration="2679000" />
       <workItem from="1635214787190" duration="7808000" />
       <workItem from="1635259533585" duration="4267000" />
+      <workItem from="1635785492406" duration="2933000" />
     </task>
     <servers />
   </component>
@@ -272,6 +279,14 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/negocio/src/test/java/co/edu/uniquindio/proyecto/test/UsuarioServicioTetst.java</url>
+          <line>21</line>
+          <properties class="co.edu.uniquindio.proyecto.test.UsuarioServicioTetst" method="registrarTest">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

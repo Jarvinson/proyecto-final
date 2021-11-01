@@ -31,7 +31,7 @@ public class Usuario extends Persona implements Serializable {
     private List<Producto>productosFavoritos;
 
     @ManyToOne
-    @JoinColumn(name = "codigoCiudad", nullable = false)
+    @JoinColumn(name = "codigoCiudad")
     private Ciudad ciudad;
 
     @OneToMany(mappedBy = "usuario")
@@ -47,7 +47,6 @@ public class Usuario extends Persona implements Serializable {
     private List<Chat> chats;
 
     @ElementCollection //Etiqueta que permite la normalizacion del atributo telefono
-    @Column(nullable = false)
     private Map<String, String> numTelefonos;
 
     // Este es el constructor de la clase Usuario
