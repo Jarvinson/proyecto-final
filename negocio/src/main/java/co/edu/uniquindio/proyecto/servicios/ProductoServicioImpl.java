@@ -20,6 +20,7 @@ public class ProductoServicioImpl implements ProductoServicio {
         this.productoRepo = productoRepo;
     }
 
+    //Función que permite la publicación de un producto
     @Override
     public Producto publicarProducto(Producto producto) throws Exception {
        try {
@@ -39,7 +40,7 @@ public class ProductoServicioImpl implements ProductoServicio {
         Optional<Producto> producto = productoRepo.findById(codigo);
 
         if(producto.isEmpty()){
-            throw new Exception("El códgigo del usuario no existe");
+            throw new Exception("El códgigo del producto no existe");
         }
 
         productoRepo.deleteById(codigo);

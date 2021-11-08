@@ -44,7 +44,7 @@ public class Producto implements Serializable {
     @Column(nullable = false, length = 100)
     private String descripcion;
 
-    @PositiveOrZero
+    @Positive
     @Column(nullable = false)
     private Double precio;
 
