@@ -12,7 +12,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/negocio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/NegocioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/NegocioApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicioImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto-final.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,73 +95,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.WebApplication">
-    <configuration name="ProductoTest.obtenerProductosEnVenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="persistencia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.ProductoTest" />
-      <option name="METHOD_NAME" value="obtenerProductosEnVenta" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NegocioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="negocio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.proyecto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="co.edu.uniquindio.proyecto.NegocioApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersistenciaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="persistencia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.proyecto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="co.edu.uniquindio.proyecto.PersistenciaApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.proyecto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="co.edu.uniquindio.proyecto.WebApplication" />
-      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+    <configuration name="ProductoTest.listarUsuariosComentariosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,18 +118,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ProductoTest.obtenerProductosEnVenta" />
-      <item itemvalue="Spring Boot.NegocioApplication" />
-      <item itemvalue="Spring Boot.PersistenciaApplication" />
+      <item itemvalue="JUnit.ProductoTest.listarUsuariosComentariosTest" />
       <item itemvalue="Spring Boot.WebApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.WebApplication" />
-        <item itemvalue="Spring Boot.WebApplication" />
-        <item itemvalue="Spring Boot.NegocioApplication" />
-        <item itemvalue="Spring Boot.WebApplication" />
-        <item itemvalue="Spring Boot.PersistenciaApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -253,6 +189,8 @@
       <workItem from="1636219501663" duration="3423000" />
       <workItem from="1636227030153" duration="2326000" />
       <workItem from="1636428114749" duration="1806000" />
+      <workItem from="1635788726568" duration="10486000" />
+      <workItem from="1636327229873" duration="7331000" />
     </task>
     <servers />
   </component>
@@ -289,14 +227,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/negocio/src/test/java/co/edu/uniquindio/proyecto/test/UsuarioServicioTetst.java</url>
-          <line>21</line>
-          <properties class="co.edu.uniquindio.proyecto.test.UsuarioServicioTetst" method="registrarTestTest">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
