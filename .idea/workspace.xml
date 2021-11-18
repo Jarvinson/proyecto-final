@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/EjemploBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/ejemplo.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/UsuarioBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/registrar_usuario.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/ejemplo.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/ejemplo.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +180,8 @@
       <workItem from="1636428114749" duration="1806000" />
       <workItem from="1635788726568" duration="10486000" />
       <workItem from="1636327229873" duration="7331000" />
-      <workItem from="1637181291536" duration="3939000" />
+      <workItem from="1637181291536" duration="4287000" />
+      <workItem from="1637266008216" duration="4552000" />
     </task>
     <servers />
   </component>
