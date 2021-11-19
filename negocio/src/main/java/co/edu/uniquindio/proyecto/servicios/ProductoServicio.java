@@ -26,4 +26,8 @@ public interface ProductoServicio {
     List<Producto> buscarProductos(String nombreProducto, String[] filtros);
 
     List<Producto> listarProductosUsuario(Integer codigo) throws Exception;
+
+    List<Categoria> listarCategorias();
+
+    Categoria obtenerCategoria(Integer pos) throws Exception;
 }

@@ -5,7 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CiudadServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CiudadServicioImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/BusquedaBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/ProductoBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/UsuarioBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/converter/CiudadConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/crear_producto.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/ejemplo.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/producto_creado.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/registrar_usuario.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resultado_busqueda.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/nike.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/tv.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/test/java/co/edu/uniquindio/proyecto/test/ProductoServicioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/test/java/co/edu/uniquindio/proyecto/test/ProductoServicioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/ProductoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/ProductoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +42,9 @@
       <list>
         <option value="Enum" />
         <option value="package-info" />
-        <option value="Interface" />
         <option value="XHTML File" />
+        <option value="CSS File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,12 +77,15 @@
     </option>
   </component>
   <component name="ProjectId" id="1yMgB2M1cZzbI0PC7DK5YcZVhor" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -68,7 +97,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -76,8 +106,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web" />
+      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\uploads" />
       <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\resources" />
       <recent name="C:\Users\Jarvinson\Documents\ING\VIII" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\resources\js" />
+      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\resources\css" />
+      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\js" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.WebApplication">
@@ -109,6 +146,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.WebApplication" />
         <item itemvalue="Spring Boot.WebApplication" />
       </list>
     </recent_temporary>
@@ -177,6 +215,16 @@
       <workItem from="1636428114749" duration="1806000" />
       <workItem from="1635788726568" duration="10486000" />
       <workItem from="1636327229873" duration="7331000" />
+      <workItem from="1636477851781" duration="1569000" />
+      <workItem from="1636563753544" duration="5064000" />
+      <workItem from="1636672026120" duration="2099000" />
+      <workItem from="1636829562249" duration="14261000" />
+      <workItem from="1636918190684" duration="6164000" />
+      <workItem from="1637276794958" duration="5058000" />
+      <workItem from="1637291771431" duration="4217000" />
+      <workItem from="1637296078315" duration="2746000" />
+      <workItem from="1637329685225" duration="597000" />
+      <workItem from="1637338660801" duration="2430000" />
     </task>
     <servers />
   </component>
@@ -194,6 +242,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -213,6 +264,11 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/WebApplication.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

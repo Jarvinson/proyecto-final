@@ -53,7 +53,7 @@ public class ProductoTest {
         try{
             Usuario usuario = usuarioRepo.findById(1).orElse(null);
 
-            Producto producto = new Producto("Six Pack Poker", "Cerveza", 50, "Caja por 6 cervezas", 16.500, LocalDateTime.now(), 0.0, usuario);
+            Producto producto = new Producto("Six Pack Poker", "Cerveza", 50, "Caja por 6 cervezas", 16.500,  0.0, LocalDateTime.now(), usuario);
             Producto productoGuardado = productoRepo.save(producto);
             Assertions.assertNotNull(productoGuardado);
         }catch(Exception e){

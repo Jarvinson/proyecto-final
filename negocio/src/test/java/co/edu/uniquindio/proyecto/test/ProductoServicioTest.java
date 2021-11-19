@@ -29,7 +29,7 @@ public class ProductoServicioTest {
         try {
             vendedor = usuarioServicio.obtenerUsuario(123);
             LocalDateTime ldt = LocalDateTime.of(2021, 12, 25, 20, 10);
-            Producto producto = new Producto("Tv 55 " , "Maravilloso Tv", 10, "Bueno", 2000.000, ldt, 0.0, vendedor);
+            Producto producto = new Producto("Tv 55 " , "Maravilloso Tv", 10, "Bueno", 2000.000,  0.0, ldt, vendedor);
             Producto publicado = productoServicio.publicarProducto(producto);
             Assertions.assertNotNull(publicado);
 

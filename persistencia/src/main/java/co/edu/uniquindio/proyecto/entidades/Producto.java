@@ -71,8 +71,7 @@ public class Producto implements Serializable {
     private Ciudad ciudad;
 
     @ElementCollection
-    @Column(nullable = false)
-    private Map<String, String> imagenes;
+    private List<String> imagenes;
 
     @OneToMany(mappedBy = "producto")
     @ToString.Exclude
@@ -92,14 +91,14 @@ public class Producto implements Serializable {
     // Este es el constructor de la clase Producto
 
     public Producto(String nombre, String nombrePublicacion, Integer unidades, String descripcion, Double precio,
-                    LocalDateTime fechaLimite, Double descuento, Usuario vendedor) {
+                    Double descuento, LocalDateTime fechaLimite, Usuario vendedor) {
         this.nombre = nombre;
         this.nombrePublicacion = nombrePublicacion;
         this.unidades = unidades;
         this.descripcion = descripcion;
         this.precio = precio;
-        this.fechaLimite = fechaLimite;
         this.descuento = descuento;
+        this.fechaLimite = fechaLimite;
         this.vendedor = vendedor;
     }
 }

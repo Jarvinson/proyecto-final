@@ -18,6 +18,7 @@ public class Categoria implements Serializable {
     @Id
     @Column(length = 10)
     @EqualsAndHashCode.Include
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codigo;
 
     @NotBlank(message = "Debe ingresar una categoria")

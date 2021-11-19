@@ -4,6 +4,7 @@ import co.edu.uniquindio.proyecto.entidades.Categoria;
 import co.edu.uniquindio.proyecto.entidades.Compra;
 import co.edu.uniquindio.proyecto.entidades.Producto;
 import co.edu.uniquindio.proyecto.entidades.Usuario;
+import co.edu.uniquindio.proyecto.repositorios.CategoriaRepo;
 import co.edu.uniquindio.proyecto.repositorios.ProductoRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,9 @@ import java.util.Optional;
 public class ProductoServicioImpl implements ProductoServicio {
 
     private final ProductoRepo productoRepo;
+
+    @Autowired
+    private CategoriaRepo categoriaRepo;
 
     public ProductoServicioImpl(ProductoRepo productoRepo) {
         this.productoRepo = productoRepo;
@@ -78,11 +82,21 @@ public class ProductoServicioImpl implements ProductoServicio {
 
     @Override
     public List<Producto> buscarProductos(String nombreProducto, String[] filtros) {
-        return null;
+        return productoRepo.buscarProductoNombre(nombreProducto);
     }
 
     @Override
     public List<Producto> listarProductosUsuario(Integer codigo) throws Exception {
         return null;
+    }
+
+    @Override
+    public List<Categoria> listarCategorias() {
+        return categoriaRepo.findAll();
+    }
+
+    @Override
+    public Categoria obtenerCategoria(Integer pos) throws Exception {
+        return categoriaRepo.findById(pos).orElseThrow(() -> new Exception("El id no corresponde a ninguna categoria"));
     }
 }

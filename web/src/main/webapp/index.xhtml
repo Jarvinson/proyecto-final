@@ -12,10 +12,84 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Página de Inicio</title>
+    <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+    <h:outputStylesheet library="js" name="bootstrap.bundle.min.js"/>
+    <h:outputStylesheet library="css" name="style.css"/>
 </h:head>
 <h:body>
-    <h1>#{inicioBean.mensaje}</h1>
-    <h2>Esta página es de bienvenida</h2>
-    <h3>Programación avanzada</h3>
+
+    <div id="header">
+        <header>
+            <div class="px-3 py-2 bg-dark text-white">
+                <div class="container">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                            <span class="pi pi-shopping-cart" style="font-size: 2rem;margin-right: 10px"></span>
+                            <span class="fs-4">Unishop</span>
+                        </a>
+
+                        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small" style="text-align: center">
+                            <li>
+                                <a href="index.xhtml" class="nav-link text-white">
+                                    <i class="pi pi-home bi d-block mx-auto mb-1 icon-menu" ></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="crear_producto.xhtml" class="nav-link text-white">
+                                    <i class="pi pi-plus bi d-block mx-auto mb-1 icon-menu" ></i>
+                                    Crear producto
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <i class="pi pi-minus bi d-block mx-auto mb-1 icon-menu" ></i>
+                                    Orders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <i class="pi pi-minus bi d-block mx-auto mb-1 icon-menu" ></i>
+                                    Products
+                                </a>
+                            </li>
+                            <li>
+                                <a href="registrar_usuario.xhtml" class="nav-link text-white">
+                                    <i class="pi pi-user-plus bi d-block mx-auto mb-1 icon-menu" ></i>
+                                    Customers
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3 py-2 border-bottom mb-3">
+                <div class="container d-flex flex-wrap justify-content-center">
+
+
+                        <div class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
+                            <h:form >
+                                <p:inputText placeholder="¿Qué producto está buscando?" required="true" value="#{busquedaBean.busqueda}" update="@form" />
+                                <p:commandButton icon="pi pi-search" action="#{busquedaBean.buscar}" update="@form" />
+                            </h:form>
+                        </div>
+
+
+                    <div class="text-end">
+                        <h:form>
+                            <h:commandButton value="Login" styleClass="btn btn-light text-dark me-2"/>
+                            <h:commandButton value="Sign up" styleClass="btn btn-primary" action="registrar_usuario?faces-redirect=true"/>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    </div>
+
+    <div id="content">
+
+    </div>
+
 </h:body>
 </html>
