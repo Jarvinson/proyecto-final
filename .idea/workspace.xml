@@ -5,32 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CiudadServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CiudadServicioImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/BusquedaBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/ProductoBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/UsuarioBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/converter/CiudadConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/crear_producto.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/ejemplo.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/producto_creado.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/registrar_usuario.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resultado_busqueda.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/nike.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/tv.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CategoriaServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CategoriaServicioImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/converter/CategoriaConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/test/java/co/edu/uniquindio/proyecto/test/ProductoServicioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/test/java/co/edu/uniquindio/proyecto/test/ProductoServicioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/ProductoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/ProductoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/crear_producto.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/crear_producto.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
