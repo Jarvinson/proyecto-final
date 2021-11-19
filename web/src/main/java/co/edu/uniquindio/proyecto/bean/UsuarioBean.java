@@ -1,8 +1,12 @@
 package co.edu.uniquindio.proyecto.bean;
 
+
 import co.edu.uniquindio.proyecto.entidades.Ciudad;
 import co.edu.uniquindio.proyecto.entidades.Usuario;
 import co.edu.uniquindio.proyecto.servicios.CiudadServicio;
+
+import co.edu.uniquindio.proyecto.entidades.Usuario;
+
 import co.edu.uniquindio.proyecto.servicios.UsuarioServicio;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,7 +37,7 @@ public class UsuarioBean implements Serializable {
     private CiudadServicio ciudadServicio;
 
     @PostConstruct
-    public void inicializar(){
+    public void inicializar() {
 
         usuario = new Usuario();
         ciudades = ciudadServicio.listarCiudades();
@@ -42,6 +46,7 @@ public class UsuarioBean implements Serializable {
     public void registrarUsuario(){
         try {
             usuarioServicio.registrarUsuario(usuario);
+
             FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alert", "Registro exitoso");
             FacesContext.getCurrentInstance().addMessage(null, facesMsg);
         } catch (Exception e) {
@@ -49,5 +54,6 @@ public class UsuarioBean implements Serializable {
             FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alerta", e.getMessage());
             FacesContext.getCurrentInstance().addMessage(null, facesMsg);
         }
+
     }
 }

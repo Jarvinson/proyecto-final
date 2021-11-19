@@ -10,10 +10,11 @@
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <title>Crear nuevo usuario</title>
 </h:head>
 <h:body>
-    <p:panel header="Registrar usuario">
+    <p:panel header="Registrar nuevo usuario">
     <h:form>
         <h:panelGrid columns="2" cellpadding="5">
 
@@ -44,5 +45,7 @@
         <p:commandButton value="Registrar usuario" action="#{usuarioBean.registrarUsuario}" update="@form" icon="pi pi-user-plus"/>
     </h:form>
     </p:panel>
+
+
 </h:body>
 </html>
