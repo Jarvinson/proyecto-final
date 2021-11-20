@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CategoriaServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CategoriaServicioImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/UsuarioBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/converter/CategoriaConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/registrar_usuario.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/DetalleProductoBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/detalle_producto.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/default.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/crear_producto.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/crear_producto.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/ejemplo.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/ejemplo.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ProductoRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ProductoRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/InicioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/InicioBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resultado_busqueda.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resultado_busqueda.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +31,8 @@
         <option value="package-info" />
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="XHTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -94,6 +99,7 @@
       <recent name="C:\Users\Jarvinson\Documents\ING\VIII" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\uploads" />
       <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\resources\js" />
       <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\resources\css" />
       <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\js" />
@@ -209,6 +215,7 @@
       <workItem from="1637338660801" duration="2430000" />
       <workItem from="1637181291536" duration="4287000" />
       <workItem from="1637266008216" duration="4552000" />
+      <workItem from="1637376773634" duration="7810000" />
     </task>
     <servers />
   </component>

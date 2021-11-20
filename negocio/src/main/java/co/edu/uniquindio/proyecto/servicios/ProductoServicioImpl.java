@@ -1,14 +1,13 @@
 package co.edu.uniquindio.proyecto.servicios;
 
-import co.edu.uniquindio.proyecto.entidades.Categoria;
-import co.edu.uniquindio.proyecto.entidades.Compra;
-import co.edu.uniquindio.proyecto.entidades.Producto;
-import co.edu.uniquindio.proyecto.entidades.Usuario;
+import co.edu.uniquindio.proyecto.entidades.*;
 import co.edu.uniquindio.proyecto.repositorios.CategoriaRepo;
+import co.edu.uniquindio.proyecto.repositorios.ComentarioRepo;
 import co.edu.uniquindio.proyecto.repositorios.ProductoRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +15,9 @@ import java.util.Optional;
 public class ProductoServicioImpl implements ProductoServicio {
 
     private final ProductoRepo productoRepo;
+
+    @Autowired
+    private ComentarioRepo comentarioRepo;
 
     @Autowired
     private CategoriaRepo categoriaRepo;
@@ -57,12 +59,19 @@ public class ProductoServicioImpl implements ProductoServicio {
 
     @Override
     public List<Producto> listarProductos(Categoria categoria) {
-        return null;
+
+        return productoRepo.listarPorCategoria(categoria);
     }
 
     @Override
-    public void comentarProducto(String mensaje, Integer calificacion, Usuario usuario, Producto producto) throws Exception {
+    public List<Producto> listarTodosProductos() {
+        return productoRepo.findAll();
+    }
 
+    @Override
+    public void comentarProducto(Comentario comentario) throws Exception {
+        comentario.setFechaComentario(LocalDateTime.now());
+        comentarioRepo.save(comentario);
     }
 
     @Override

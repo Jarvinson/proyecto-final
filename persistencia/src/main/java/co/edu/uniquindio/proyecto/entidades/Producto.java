@@ -101,4 +101,11 @@ public class Producto implements Serializable {
         this.fechaLimite = fechaLimite;
         this.vendedor = vendedor;
     }
+
+    public String getImagenPrincipal(){
+        if(imagenes != null && !imagenes.isEmpty()){
+            return imagenes.get(0);
+        }
+        return "default.png";
+    }
 }

@@ -1,3 +1,11 @@
 .icon_menu{
     font-size: 1.3rem;
 }
+
+.imagen-producto{
+    max-width: 150px;
+}
+.item-pro{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

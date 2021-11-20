@@ -88,6 +88,51 @@
     </div>
 
     <div id="content">
+        <div class="container">
+            <h1>Lista productos</h1>
+            <h:form id="form">
+                <p:dataView id="lista-productos" var="producto" value="#{inicioBean.productos}"  paginator="true" rows="5" gridIcon="pi pi-th-large" listIcon="pi pi-bars" >
+                    <p:dataViewGridItem>
+                        <div class="card" >
+                            <img src="/uploads/#{producto.imagenPrincipal}" class="card-img-top" alt="..." />
+
+                            <div class="card-body">
+                                <h5 class="card-title">#{producto.nombre}</h5>
+                                <p class="card-text">#{producto.precio}</p>
+                                <hr />
+                                <p:commandButton value="Ver detalle" styleClass="ui-button-raised" icon="pi pi-arrow-right" iconPos="right" action="#{inicioBean.irAlDetalle(producto.codigo)}"/>
+
+                            </div>
+                        </div>
+                    </p:dataViewGridItem>
+
+                    <p:dataViewListItem>
+                        <div class="row d-flex item-pro" >
+                            <div class="col-lg-2 col-md-1" style="text-align: center" >
+                                <p:graphicImage url="/uploads/#{producto.imagenPrincipal}" styleClass="imagen-producto" />
+                            </div>
+                            <div class="col-lg-8 col-md-1 align-self-center" >
+                                <p:outputPanel>
+                                    <h:panelGrid columns="2" cellpadding="5">
+                                        <h:outputText value="Nombre:" />
+                                        <h:outputText value="#{producto.nombre}" style="font-weight:bold" />
+                                        <h:outputText value="Precio:" />
+                                        <h:outputText value="$#{producto.precio}" />
+                                        <h:outputText value="Categorías:" />
+                                        <h:outputText value="#{producto.categoria}" var="categoria" />
+                                        
+
+                                    </h:panelGrid>
+                                </p:outputPanel>
+                            </div>
+                            <div class="col-lg-2 col-md-1 align-self-center" >
+                                <p:commandButton value="Ver detalle" styleClass="ui-button-raised" icon="pi pi-arrow-right" iconPos="right" action="#{inicioBean.irAlDetalle(producto.codigo)}" />
+                            </div>
+                        </div>
+                    </p:dataViewListItem>
+                </p:dataView>
+            </h:form>
+        </div>
 
     </div>
 
