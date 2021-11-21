@@ -42,7 +42,6 @@ public interface ProductoRepo extends JpaRepository<Producto, Integer> {
     @Query("select p from Producto p where p.comentarioList is empty ")
     List<Producto> obtenerProductosSinComentarios();
 
-
     List<Producto> findByNombreContains(String nombre);
 
     @Query("select p from Producto p where p.nombre like concat('%', :nombre, '%') ")
@@ -56,4 +55,7 @@ public interface ProductoRepo extends JpaRepository<Producto, Integer> {
 
     @Query("select p from Producto p where :categoria member of p.categoria")
     List<Producto> listarPorCategoria(Categoria categoria);
+
+    @Query("select p from Producto p join p.usuarios u where u.codigo = :id")
+    List<Producto> listarProductosUsuario(Integer id);
 }

@@ -15,15 +15,13 @@ import java.util.Optional;
 public class ProductoServicioImpl implements ProductoServicio {
 
     private final ProductoRepo productoRepo;
+    private final ComentarioRepo comentarioRepo;
+    private final CategoriaRepo categoriaRepo;
 
-    @Autowired
-    private ComentarioRepo comentarioRepo;
-
-    @Autowired
-    private CategoriaRepo categoriaRepo;
-
-    public ProductoServicioImpl(ProductoRepo productoRepo) {
+    public ProductoServicioImpl(ProductoRepo productoRepo, ComentarioRepo comentarioRepo, CategoriaRepo categoriaRepo) {
         this.productoRepo = productoRepo;
+        this.comentarioRepo = comentarioRepo;
+        this.categoriaRepo = categoriaRepo;
     }
 
     //Función que permite la publicación de un producto
@@ -37,7 +35,14 @@ public class ProductoServicioImpl implements ProductoServicio {
     }
 
     @Override
-    public void actualizarProducto(Producto p) throws Exception {
+    public Producto actualizarProducto(Producto p) throws Exception {
+        Optional<Producto> buscado = productoRepo.findById(p.getCodigo());
+
+        if (buscado.isEmpty()) {
+            throw new Exception("El producto no existe");
+        }
+
+        return productoRepo.save(p);
 
     }
 
@@ -65,6 +70,7 @@ public class ProductoServicioImpl implements ProductoServicio {
 
     @Override
     public List<Producto> listarTodosProductos() {
+
         return productoRepo.findAll();
     }
 
@@ -90,22 +96,14 @@ public class ProductoServicioImpl implements ProductoServicio {
     }
 
     @Override
-    public List<Producto> buscarProductos(String nombreProducto, String[] filtros) {
+    public List<Producto> buscarProductos(String nombreProducto, String[] filtros){
         return productoRepo.buscarProductoNombre(nombreProducto);
     }
 
     @Override
     public List<Producto> listarProductosUsuario(Integer codigo) throws Exception {
-        return null;
+        return productoRepo.listarProductosUsuario(codigo);
     }
 
-    @Override
-    public List<Categoria> listarCategorias() {
-        return categoriaRepo.findAll();
-    }
 
-    @Override
-    public Categoria obtenerCategoria(Integer pos) throws Exception {
-        return categoriaRepo.findById(pos).orElseThrow(() -> new Exception("El id no corresponde a ninguna categoria"));
-    }
 }

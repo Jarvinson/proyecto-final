@@ -59,6 +59,15 @@ public class UsuarioServicioTetst {
         }
 
     }
+    @Test
+    public void obtenerTest(){
+        try {
+            Usuario u = usuarioServicio.obtenerUsuario(123);
+            Assertions.assertNotNull(u);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Test
     public void loginTest(){

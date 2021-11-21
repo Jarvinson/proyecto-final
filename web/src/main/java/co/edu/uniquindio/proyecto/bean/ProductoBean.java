@@ -4,6 +4,7 @@ import co.edu.uniquindio.proyecto.entidades.Categoria;
 import co.edu.uniquindio.proyecto.entidades.Ciudad;
 import co.edu.uniquindio.proyecto.entidades.Producto;
 import co.edu.uniquindio.proyecto.entidades.Usuario;
+import co.edu.uniquindio.proyecto.servicios.CategoriaServicio;
 import co.edu.uniquindio.proyecto.servicios.CiudadServicio;
 import co.edu.uniquindio.proyecto.servicios.ProductoServicio;
 import co.edu.uniquindio.proyecto.servicios.UsuarioServicio;
@@ -48,6 +49,9 @@ public class ProductoBean implements Serializable {
     @Autowired
     private CiudadServicio ciudadServicio;
 
+    @Autowired
+    private CategoriaServicio categoriaServicio;
+
     private ArrayList<String> imagenes;
 
     @Value("${upload.url}")
@@ -58,7 +62,7 @@ public class ProductoBean implements Serializable {
 
         this.producto = new Producto();
         this.imagenes = new ArrayList<>();
-        categorias = productoServicio.listarCategorias();
+        categorias = categoriaServicio.listarCategorias();
         ciudades = ciudadServicio.listarCiudades();
     }
 
