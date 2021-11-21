@@ -108,4 +108,11 @@ public class Producto implements Serializable {
         }
         return "default.png";
     }
+
+    public String getNameCategory(){
+        for (Categoria name: categoria) {
+                return name.getNombre();
+        }
+        return  null;
+    }
 }

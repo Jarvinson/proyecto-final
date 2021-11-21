@@ -9,6 +9,7 @@ import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Entity
 @Getter
@@ -54,5 +55,10 @@ public class Comentario implements Serializable {
         this.calificacion = calificacion;
         this.producto = producto;
         this.usuario = usuario;
+    }
+
+
+    public String getFechaEstilo(){
+        return fechaComentario.format(DateTimeFormatter.ISO_DATE);
     }
 }
