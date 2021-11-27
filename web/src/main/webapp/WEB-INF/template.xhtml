@@ -4,6 +4,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -14,6 +15,7 @@
     <h:outputStylesheet library="css" name="style.css"/>
 </h:head>
 <h:body>
+
     <div id="header">
         <div class="px-3 py-2 bg-dark text-white">
             <div class="container">
@@ -25,37 +27,37 @@
 
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small" style="text-align: center">
                         <li>
-                            <a href="index.xhtml" class="nav-link text-white">
+                            <a href="/index.xhtml" class="nav-link text-white">
                                 <i class="pi pi-home bi d-block mx-auto mb-1 icon-menu" ></i>
                                 Home
                             </a>
                         </li>
-                        <li>
-                            <a href="crear_producto.xhtml" class="nav-link text-white">
+                        <li jsf:rendered="#{seguridadBean.autenticado}">
+                            <a href="/usuario/crear_producto.xhtml" class="nav-link text-white">
                                 <i class="pi pi-plus bi d-block mx-auto mb-1 icon-menu" ></i>
                                 Crear producto
                             </a>
                         </li>
-                        <li>
-                            <a href="mis_productos.xhtml" class="nav-link text-white">
+                        <li jsf:rendered="#{seguridadBean.autenticado}">
+                            <a href="/usuario/mis_productos.xhtml" class="nav-link text-white">
                                 <i class="pi pi-list bi d-block mx-auto mb-1 icon-menu" ></i>
                                 Mis productos
                             </a>
                         </li>
-                        <li>
-                            <a href="compras_usuario.xhtml" class="nav-link text-white">
+                        <li jsf:rendered="#{seguridadBean.autenticado}">
+                            <a href="/usuario/compras_usuario.xhtml" class="nav-link text-white">
                                 <i class="pi pi-dollar d-block mx-auto mb-1 icon-menu" ></i>
                                 Compras
                             </a>
                         </li>
-                        <li>
-                            <a href="perfil.xhtml" class="nav-link text-white">
+                        <li jsf:rendered="#{seguridadBean.autenticado}">
+                            <a href="/usuario/perfil.xhtml" class="nav-link text-white">
                                 <i class="pi pi-user-plus bi d-block mx-auto mb-1 icon-menu" ></i>
                                 Perfil
                             </a>
                         </li>
-                        <li>
-                            <a href="carrito.xhtml" class="nav-link text-white">
+                        <li jsf:rendered="#{seguridadBean.autenticado}">
+                            <a href="/usuario/carrito.xhtml" class="nav-link text-white">
                                 <i class="pi pi-shopping-cart bi d-block mx-auto mb-1 icon-menu" ></i>
                                 Carrito
                             </a>
@@ -77,14 +79,39 @@
 
 
                 <div class="text-end">
-                    <h:form>
-                        <h:commandButton value="Login" styleClass="btn btn-light text-dark me-2"/>
-                        <h:commandButton value="Sign up" styleClass="btn btn-primary" action="registrar_usuario?faces-redirect=true"/>
+                    <h:form rendered="#{!seguridadBean.autenticado}">
+                        <p:commandButton value="Login" styleClass="btn btn-primary  me-2" onclick="PF('login').show()" icon="pi pi-sign-in"/>
+                        <p:commandButton value="Sign up" styleClass="btn btn-primary" action="registrar_usuario?faces-redirect=true" icon="pi pi-user-plus"/>
                     </h:form>
+                    <div id="info-session" jsf:rendered="#{seguridadBean.autenticado}">
+                        <h5>Hola, #{seguridadBean.usuarioSesion.nombre}</h5>
+                        <h:form>
+                            <p:commandButton value="Cerrar sesión" styleClass="btn btn-primary" action="#{seguridadBean.cerrarSesion}" icon="pi pi-sign-out"/>
+                        </h:form>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <p:dialog header="Iniciar sesión" showEffect="fade" widgetVar="login" modal="true"
+              rendered="#{!seguridadBean.autenticado}" >
+    <h:form >
+        <h:panelGrid columns="3" cellpadding="5">
+            <p:outputLabel for="email_login" value="Email:" />
+            <p:inputText id="email_login" value="#{seguridadBean.email}" required="true" />
+            <p:message for="email_login" />
+
+            <p:outputLabel for="password_login" value="Password:" />
+            <p:password id="password_login" value="#{seguridadBean.password}" required="true"/>
+            <p:message for="password_login" />
+        </h:panelGrid>
+        <p:commandButton value="Iniciar Sesión" action="#{seguridadBean.iniciarSesion}"
+                         styleClass="mt-4" update="@form" icon="pi pi-sign-in" iconPos="left" />
+        <p:growl for="login-bean" showDetail="true" />
+    </h:form>
+    </p:dialog>
 
     <div id="content">
        <div class="container">
