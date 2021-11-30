@@ -70,7 +70,7 @@ public class Producto implements Serializable {
     @ManyToOne
     private Ciudad ciudad;
 
-    @ElementCollection
+    @ElementCollection(fetch=FetchType.EAGER)
     private List<String> imagenes;
 
     @OneToMany(mappedBy = "producto")

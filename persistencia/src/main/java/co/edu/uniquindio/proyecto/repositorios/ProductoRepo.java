@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -56,6 +57,12 @@ public interface ProductoRepo extends JpaRepository<Producto, Integer> {
     @Query("select p from Producto p where :categoria member of p.categoria")
     List<Producto> listarPorCategoria(Categoria categoria);
 
-    @Query("select p from Producto p join p.usuarios u where u.codigo = :id")
+    @Query("select u.productoList from Producto p join p.usuarios u where u.codigo = :id")
     List<Producto> listarProductosUsuario(Integer id);
+
+    @Query("select u.productosFavoritos from Producto p join p.usuarios u where u.codigo = :codigo")
+    List<Producto> listarProductosFavoritos(Integer codigo);
+
+    @Query("delete from Usuario u where u.productosFavoritos in (select p from Producto p where p.codigo = :id and u.codigo = :codigo)")
+    void eliminarFavoritos(Integer id, Integer codigo);
 }

@@ -1,7 +1,9 @@
 package co.edu.uniquindio.proyecto.servicios;
 
 import co.edu.uniquindio.proyecto.entidades.Comentario;
+import co.edu.uniquindio.proyecto.entidades.Producto;
 import co.edu.uniquindio.proyecto.repositorios.ComentarioRepo;
+import co.edu.uniquindio.proyecto.repositorios.ProductoRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,9 @@ public class ComentarioServicioImpl implements ComentarioServicio {
 
     @Autowired
     private ComentarioRepo comentarioRepo;
+
+    @Autowired
+    private ProductoRepo productoRepo;
 
 
     @Override
@@ -53,5 +58,15 @@ public class ComentarioServicioImpl implements ComentarioServicio {
     @Override
     public List<Comentario> listarComentariosRango(int calificacionMenor, int calificacionMayor) {
         return comentarioRepo.listarComentariosRango(calificacionMenor, calificacionMayor);
+    }
+
+    @Override
+    public Integer calificacionPromedio(Integer codigo) throws Exception {
+        Optional<Producto> producto = productoRepo.findById(codigo);
+
+        if(producto.isEmpty()){
+            throw new Exception("El producto no existe");
+        }
+        return comentarioRepo.calidicacionPromedio(codigo);
     }
 }

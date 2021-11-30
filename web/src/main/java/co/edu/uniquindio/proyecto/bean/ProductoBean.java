@@ -52,6 +52,12 @@ public class ProductoBean implements Serializable {
     @Autowired
     private CategoriaServicio categoriaServicio;
 
+    @Autowired
+    private SeguridadBean seguridadBean;
+
+    @Value("#{seguridadBean.usuarioSesion}")
+    private Usuario usuarioSesion;
+
     private ArrayList<String> imagenes;
 
     @Value("${upload.url}")
@@ -68,18 +74,19 @@ public class ProductoBean implements Serializable {
 
     public void crearProducto(){
         try {
-            if(!imagenes.isEmpty()) {
-                Usuario usuario = usuarioServicio.obtenerUsuario(123);
-                producto.setVendedor(usuario);
-                producto.setImagenes(imagenes);
-                producto.setFechaLimite(LocalDateTime.now().plusMonths(1));
-                productoServicio.publicarProducto(producto);
-
-                FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alert", "Producto creado");
-                FacesContext.getCurrentInstance().addMessage(null, facesMsg);
-            }else{
-                FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Alert", "Debe subir al menos una imagen");
-                FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+            if(usuarioSesion != null){
+                if(!imagenes.isEmpty()) {
+                    producto.setVendedor(usuarioSesion);
+                    producto.setImagenes(imagenes);
+                    producto.setFechaLimite(LocalDateTime.now().plusMonths(1));
+                    productoServicio.publicarProducto(producto);
+                    seguridadBean.listarProductosUsuario();
+                    FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alert", "Producto creado");
+                    FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+                }else{
+                    FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Alert", "Debe subir al menos una imagen");
+                    FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+                }
             }
 
         } catch (Exception e) {

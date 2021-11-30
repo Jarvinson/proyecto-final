@@ -2,6 +2,7 @@ package co.edu.uniquindio.proyecto.servicios;
 
 
 import co.edu.uniquindio.proyecto.entidades.Compra;
+import co.edu.uniquindio.proyecto.entidades.DetalleCompra;
 import co.edu.uniquindio.proyecto.repositorios.CompraRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -57,6 +58,11 @@ public class CompraServicioImpl implements CompraServicio{
     @Override
     public List<Compra> findAllByMedioPago(String nombre) {
         return compraRepo.findAllByMedioPago(nombre);
+    }
+
+    @Override
+    public List<DetalleCompra> listarComprasUsuario(Integer codigo){
+        return compraRepo.listarComprasUsuario(codigo);
     }
 
     @Override

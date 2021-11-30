@@ -1,6 +1,7 @@
 package co.edu.uniquindio.proyecto.servicios;
 
 import co.edu.uniquindio.proyecto.entidades.Compra;
+import co.edu.uniquindio.proyecto.entidades.DetalleCompra;
 import co.edu.uniquindio.proyecto.entidades.Producto;
 
 import java.util.List;
@@ -18,6 +19,8 @@ public interface CompraServicio {
     List<Compra> listaCompras();
 
     List<Compra> findAllByMedioPago(String nombre);
+
+    List<DetalleCompra> listarComprasUsuario(Integer codigo);
 
     Long obtenerTotalProductosCompradosUsuario(Integer codigo);
 

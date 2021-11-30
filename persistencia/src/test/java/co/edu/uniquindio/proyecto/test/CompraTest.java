@@ -105,9 +105,10 @@ public class CompraTest {
     }
 
     @Test
-    @Sql("classpath:data.sql")
     public void listaProductosCompradosTest(){
-        long  totalProductos = compraRepo.obtenerListaProductosComprados(1);
+        long  totalProductos = compraRepo.obtenerTotalProductosComprados(1);
         System.out.println(totalProductos);;
     }
+
+
 }

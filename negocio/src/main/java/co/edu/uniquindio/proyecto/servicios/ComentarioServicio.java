@@ -19,5 +19,7 @@ public interface ComentarioServicio {
 
     List<Comentario> listarComentariosRango(int calificacionMenor, int calificacionMayor);
 
+    Integer calificacionPromedio(Integer codigo) throws Exception;
+
 
 }

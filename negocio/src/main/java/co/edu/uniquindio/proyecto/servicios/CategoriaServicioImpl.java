@@ -46,7 +46,6 @@ public class CategoriaServicioImpl implements CategoriaServicio{
 
     }
 
-
     @Override
     public void eliminarCategoria(Integer id) throws Exception{
 
@@ -64,6 +63,11 @@ public class CategoriaServicioImpl implements CategoriaServicio{
 
         List<Categoria> lista = categoriaRepo.findAllByNombreContains(categoria);
         return lista;
+    }
+
+    @Override
+    public List<Object[]> obtenerCategoriaMasUsada() {
+        return categoriaRepo.obtenerCategoriaMasUsada();
     }
 
 }

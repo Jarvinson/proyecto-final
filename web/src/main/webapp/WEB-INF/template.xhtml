@@ -44,8 +44,16 @@
                                 Mis productos
                             </a>
                         </li>
+
                         <li jsf:rendered="#{seguridadBean.autenticado}">
-                            <a href="/usuario/compras_usuario.xhtml" class="nav-link text-white">
+                            <a href="/usuario/favoritos.xhtml" class="nav-link text-white">
+                                <i class="pi pi-heart bi d-block mx-auto mb-1 icon-menu" ></i>
+                                Favoritos
+                            </a>
+                        </li>
+
+                        <li jsf:rendered="#{seguridadBean.autenticado}">
+                            <a href="/usuario/compras_usuario.xhtml"  class="nav-link text-white" >
                                 <i class="pi pi-dollar d-block mx-auto mb-1 icon-menu" ></i>
                                 Compras
                             </a>
@@ -60,6 +68,12 @@
                             <a href="/usuario/carrito.xhtml" class="nav-link text-white">
                                 <i class="pi pi-shopping-cart bi d-block mx-auto mb-1 icon-menu" ></i>
                                 Carrito
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/usuario/carrito.xhtml" class="nav-link text-white">
+                                <i class="pi pi-tag bi d-block mx-auto mb-1 icon-menu" ></i>
+                                Categorias
                             </a>
                         </li>
                     </ul>
@@ -97,38 +111,46 @@
 
     <p:dialog header="Iniciar sesión" showEffect="fade" widgetVar="login" modal="true"
               rendered="#{!seguridadBean.autenticado}" >
-    <h:form >
-        <h:panelGrid columns="3" cellpadding="5">
-            <p:outputLabel for="email_login" value="Email:" />
-            <p:inputText id="email_login" value="#{seguridadBean.email}" required="true" />
-            <p:message for="email_login" />
+        <h:form >
+            <h:panelGrid columns="3" cellpadding="5">
+                <p:outputLabel for="email_login" value="Email:" />
+                <p:inputText id="email_login" value="#{seguridadBean.email}" required="true" />
+                <p:message for="email_login" />
 
-            <p:outputLabel for="password_login" value="Password:" />
-            <p:password id="password_login" value="#{seguridadBean.password}" required="true"/>
-            <p:message for="password_login" />
-        </h:panelGrid>
-        <p:commandButton value="Iniciar Sesión" action="#{seguridadBean.iniciarSesion}"
-                         styleClass="mt-4" update="@form" icon="pi pi-sign-in" iconPos="left" />
-        <p:growl for="login-bean" showDetail="true" />
-    </h:form>
+                <p:outputLabel for="password_login" value="Password:" />
+                <p:password id="password_login" value="#{seguridadBean.password}" required="true"/>
+                <p:message for="password_login" />
+            </h:panelGrid>
+            <div align="center">
+                <p:commandButton value="Iniciar Sesión" action="#{seguridadBean.iniciarSesion}"
+                                 styleClass="mt-4 align-content-center" update="@form" icon="pi pi-sign-in" iconPos="left" />
+            </div>
+
+            <div align="center">
+                <p:commandLink id="ajax" update="@form" action="Ok" style="margin-right:30px;">
+                    <h:outputText value="¿Olvidaste tu contraseña?"/>
+                </p:commandLink>
+            </div>
+            <p:growl for="login-bean" showDetail="true" />
+        </h:form>
     </p:dialog>
 
     <div id="content">
-       <div class="container">
-           <ui:insert name="content">Contenido</ui:insert>
-       </div>
+        <div class="container">
+            <ui:insert name="content">Contenido</ui:insert>
+        </div>
     </div>
 
     <div id="footer" class="footer mt-5">
-                <ui:insert name="footer">
-                    <div class="py-4 bg-light" align="center">
-                        <div class="justify-content-center" >
-                            <div class="col-10" >
-                                <span>Universidad del Quindío - Programación avanzada - 2021</span>
-                            </div>
-                        </div>
+        <ui:insert name="footer">
+            <div class="py-4 bg-light" align="center">
+                <div class="justify-content-center" >
+                    <div class="col-10" >
+                        <span>Universidad del Quindío - Programación avanzada - 2021</span>
                     </div>
-                </ui:insert>
+                </div>
             </div>
+        </ui:insert>
+    </div>
 </h:body>
 </html>
