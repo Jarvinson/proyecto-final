@@ -28,6 +28,9 @@ public class UsuarioBean implements Serializable {
     private Usuario usuario;
 
     @Getter @Setter
+    private String userName;
+
+    @Getter @Setter
     private List<Ciudad> ciudades;
 
     @Autowired
@@ -40,6 +43,7 @@ public class UsuarioBean implements Serializable {
     public void inicializar() {
 
         usuario = new Usuario();
+        userName = " ";
         ciudades = ciudadServicio.listarCiudades();
     }
 
@@ -54,6 +58,21 @@ public class UsuarioBean implements Serializable {
             FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alerta", e.getMessage());
             FacesContext.getCurrentInstance().addMessage(null, facesMsg);
         }
+    }
 
+    public void recuperarContraseña( ){
+
+        try {
+            usuarioServicio.obtenerUsuarioUsername(userName);
+            FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alert", "Registro exitoso");
+            FacesContext.getCurrentInstance().addMessage("password", facesMsg);
+        } catch (Exception e) {
+            FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alert", e.getMessage());
+            FacesContext.getCurrentInstance().addMessage("password", facesMsg);
+        }
+    }
+
+    public String irPassword() {
+        return "/recuperar_contraseña?faces-redirect=true&amp";
     }
 }

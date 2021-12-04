@@ -1,25 +1,26 @@
 package co.edu.uniquindio.proyecto.bean;
 
 import co.edu.uniquindio.proyecto.dto.ProductoCarrito;
-import co.edu.uniquindio.proyecto.entidades.Compra;
-import co.edu.uniquindio.proyecto.entidades.DetalleCompra;
-import co.edu.uniquindio.proyecto.entidades.Producto;
-import co.edu.uniquindio.proyecto.entidades.Usuario;
-import co.edu.uniquindio.proyecto.servicios.CompraServicio;
-import co.edu.uniquindio.proyecto.servicios.ProductoServicio;
-import co.edu.uniquindio.proyecto.servicios.UsuarioServicio;
+import co.edu.uniquindio.proyecto.entidades.*;
+import co.edu.uniquindio.proyecto.servicios.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.primefaces.PrimeFaces;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.mail.MessagingException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Scope("session")
 @Component
@@ -46,6 +47,15 @@ public class SeguridadBean implements Serializable{
     @Autowired
     private CompraServicio compraServicio;
 
+    @Autowired
+    private ComentarioServicio comentarioServicio;
+
+    @Autowired
+    private EmailSenderService emailSenderService;
+
+    @Getter @Setter
+    private List<String> medioPago;
+
     @Getter @Setter
     private ArrayList<ProductoCarrito> productosCarrito;
 
@@ -59,13 +69,17 @@ public class SeguridadBean implements Serializable{
     private List<Producto> productosUsuarios;
 
     @Getter @Setter
+    private List<Producto> selectedProducts;
+
+    @Getter @Setter
     private Double subTotal;
 
     @Getter @Setter
-    private String medioPago;
+    private Compra compra;
 
     @Getter @Setter
-    private Compra compra;
+    private String medioP;
+
 
     @PostConstruct
     void inicializar(){
@@ -74,6 +88,7 @@ public class SeguridadBean implements Serializable{
         this.comprasUsuario = new ArrayList<>();
         this.productosFavoritos = new ArrayList<>();
         this.productosUsuarios = new ArrayList<>();
+        this.medioPago = new ArrayList<>();
     }
 
     public String iniciarSesion(){
@@ -100,6 +115,11 @@ public class SeguridadBean implements Serializable{
     }
 
     public void agregarCarrito(Integer id, Double precio, String nombre, String imagen){
+
+
+        medioPago.add("Tarjeta débito");
+        medioPago.add("Tarjeta crédito");
+        medioPago.add("PSE");
 
         ProductoCarrito pc = new ProductoCarrito(id, nombre, imagen, precio, 1);
 
@@ -129,15 +149,20 @@ public class SeguridadBean implements Serializable{
     }
 
     public void comprar(){
+
         if(usuarioSesion != null && !productosCarrito.isEmpty()){
             try {
-
-                productoServicio.realizarCompra(usuarioSesion, productosCarrito, "medioPago" );
+                productoServicio.realizarCompra(usuarioSesion, productosCarrito, "PSE" );
+                triggerMail();
+                System.out.println(productosCompra()+"1111111111");
                 productosCarrito.clear();
                 subTotal =0.0;
-
                 FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alert", "Compra realizada");
                 FacesContext.getCurrentInstance().addMessage("compra-msj", fm);
+                productosCompra();
+
+
+
             } catch (Exception e) {
                 FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alert", e.getMessage());
                 FacesContext.getCurrentInstance().addMessage("compra-msj", fm);
@@ -207,6 +232,95 @@ public class SeguridadBean implements Serializable{
             e.printStackTrace();
         }
     }
+
+    public String getDeleteButtonMessage() {
+        if (hasSelectedProducts()) {
+            int size = this.selectedProducts.size();
+            return size > 1 ? size + " productos seleccionados" : "1 producto seleccionado";
+        }
+        return "Delete";
+    }
+
+    public boolean hasSelectedProducts() {
+        return this.selectedProducts != null && !this.selectedProducts.isEmpty();
+    }
+
+    public void deleteSelectedProducts() {
+        this.productosUsuarios.removeAll(this.selectedProducts);
+        this.selectedProducts = null;
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Productos Eliminados"));
+        PrimeFaces.current().ajax().update("form:messages", "form:dt-products");
+        PrimeFaces.current().executeScript("PF('dtProducts').clearFilters()");
+    }
+
+    public void deleteProduct() {
+        this.productosUsuarios.remove(this.producto);
+        this.producto = null;
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Producto eliminado"));
+        PrimeFaces.current().ajax().update("form:messages", "form:dt-products");
+    }
+
+    public void updateProduct(){
+        try {
+            productoServicio.actualizarProducto(this.producto);
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Producto Actualizado"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        PrimeFaces.current().executeScript("PF('manageProductDialog').hide()");
+        PrimeFaces.current().ajax().update("form:messages", "form:dt-products");
+    }
+
+    public Integer getCalificacionPromedio(int codigo){
+        try {
+            return comentarioServicio.calificacionPromedio(codigo);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public String getNameCategory(int codigo){
+        try {
+            return productoServicio.obtenerCategoria(codigo);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    public void triggerMail(){
+
+            String mensaje = "<h1>UNISHOP</h1>";
+
+            mensaje += "<h2>Hola, " + usuarioSesion.getNombre() + "</h2>"
+                    + "\n\nTu pedido ha sido confirmado, llegará en los próximos días.\n"
+                    + "\n<h4>DETALLES DE LA COMPRA</h4>"
+                    + "<P>" + productosCompra() + "</P>"
+                    + "</br>SubTotal: $" + subTotal
+                    + "<h2>Total compra: $" + subTotal
+                    + "</h2></br></br>Atentamente, "
+                    + "<h3>UNISHOP</h3>";
+            try {
+                emailSenderService.sendSimpleEmail("jarvinsonv30@gmail.com", mensaje,
+                               "Compra Unishop");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }
+
+    public String productosCompra(){
+        String nombre = "";
+        for (ProductoCarrito p: productosCarrito) {
+             nombre +=  p.getNombre().toUpperCase()
+                     + "<br>Cantidad: " + p.getUnidades()
+                     + "<br>$"+ p.getPrecio() + "<br><br>";
+        }
+        return nombre;
+    }
+
+
 }
 
 

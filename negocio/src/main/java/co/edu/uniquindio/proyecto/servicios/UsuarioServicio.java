@@ -21,6 +21,8 @@ public interface UsuarioServicio {
 
     Usuario iniciarSesion(String email, String password) throws Exception;
 
+    Usuario obtenerUsuarioUsername(String username) throws Exception;
+
 
 
 

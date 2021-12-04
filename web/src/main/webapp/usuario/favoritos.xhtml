@@ -18,8 +18,8 @@
                     <div class="card" >
                         <img src="/uploads/#{favoritos.imagenPrincipal}" class="card-img-top" alt="..." />
                         <div class="card-body">
-                            <h5 class="card-title">#{favoritos.nombre}</h5>
-                            <p class="card-text">Precio: #{favoritos.precio}</p>
+                            <h5 class="card-title" style="font-weight: bold">#{favoritos.nombre}</h5>
+                            <p class="card-text">$#{favoritos.precio}</p>
                             <p class="card-text">Descripcion: #{favoritos.nombrePublicacion}</p>
                             <hr />
                             <p:commandButton icon="pi pi-trash" update="@form" action="#{seguridadBean.elimanarFavorito(favoritos.codigo)}" />
@@ -34,17 +34,16 @@
                         </div>
                         <div class="col-lg-8 col-md-1 align-self-center" >
                             <p:outputPanel>
-                                <h:panelGrid columns="2" cellpadding="5">
-                                    <h:outputText value="Nombre:" />
+                                <h:panelGrid columns="1" cellpadding="3">
                                     <h:outputText value="#{favoritos.nombre}" style="font-weight:bold" />
-                                    <h:outputText value="Precio:" />
                                     <h:outputText value="$#{favoritos.precio}" />
-                                    <h:outputText value="Descripción:" />
                                     <h:outputText value="#{favoritos.nombrePublicacion}" />
+                                    <p:rating value="#{seguridadBean.getCalificacionPromedio(favoritos.codigo)}" readonly="true"/>
                                 </h:panelGrid>
                             </p:outputPanel>
                             <div class="text-end">
-                                <p:commandButton icon="pi pi-trash" update="@form" action="#{seguridadBean.elimanarFavorito(favoritos.codigo)}" />
+                                <p:commandButton icon="pi pi-trash" styleClass="btn btn-primary  me-2" update="@form" action="#{seguridadBean.elimanarFavorito(favoritos.codigo)}" />
+                                <p:button icon="pi pi-check" styleClass="btn btn-primary  me-2"/>
                             </div>
                         </div>
                     </div>

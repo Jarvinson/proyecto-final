@@ -26,10 +26,12 @@
                 <div class="p-grid">
                     <div class="box">
 
-                        <p:rating value="#{detalleProductoBean.calificacionPromedio}" readonly="true" />
-
                         <h1 class="mt-4" >#{detalleProductoBean.producto.nombre}</h1>
-                        <h1 class="mt-4">$#{detalleProductoBean.producto.precio}</h1>
+                        <h:form>
+                        <h2 class="mt-4">$#{detalleProductoBean.producto.precio}</h2>
+                        <h4 class="mt-4" style="font-family:Constantia; color: forestgreen ">#{detalleProductoBean.producto.descuento}% OFF</h4>
+                        </h:form>
+                        <p:rating value="#{detalleProductoBean.calificacionPromedio}" readonly="true" />
 
                         <h:form class="mt-4" rendered="#{seguridadBean.autenticado}">
                             <p:commandButton value="Añadir al carrito" icon="pi pi-shopping-cart" update="@form"

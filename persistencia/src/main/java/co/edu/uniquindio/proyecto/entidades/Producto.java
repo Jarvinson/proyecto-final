@@ -10,6 +10,7 @@ import javax.validation.constraints.PositiveOrZero;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -65,7 +66,7 @@ public class Producto implements Serializable {
     private List<Usuario> usuarios;
 
     @ManyToMany
-    private List<Categoria>categoria;
+    private List<Categoria>categoria = new ArrayList<>();
 
     @ManyToOne
     private Ciudad ciudad;
@@ -115,4 +116,7 @@ public class Producto implements Serializable {
         }
         return  null;
     }
+
+
+
 }

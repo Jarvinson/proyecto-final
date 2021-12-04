@@ -4,45 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/EmailSenderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/dto/ProductoCarrito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/audifonos.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/carrito.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/compras_usuario.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/crear_producto.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/favoritos.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/mis_productos.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/perfil.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="c3b10527-4576-49c3-aa5d-af29b01d894e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/recuperar_contraseña.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CategoriaServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CategoriaServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CategoriaServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CategoriaServicioImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ComentarioServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ComentarioServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ComentarioServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ComentarioServicioImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CompraServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CompraServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CompraServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/CompraServicioImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/EmailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/EmailSenderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicioImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Categoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CompraRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CompraRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ProductoRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ProductoRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/CompraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/test/CompraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/BusquedaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/BusquedaBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/WebApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/DetalleProductoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/DetalleProductoBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/ProductoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/ProductoBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/InicioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/InicioBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/SeguridadBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/SeguridadBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/UsuarioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/UsuarioBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/config/PaginaPrincipalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/config/PaginaPrincipalConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/converter/CategoriaConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/converter/CategoriaConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/template.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/carrito.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/compras_usuario.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/crear_producto.xhtml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/webapp/detalle_producto.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/detalle_producto.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resources/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resources/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/mis_productos.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/perfil.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/usuario/carrito.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/carrito.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/usuario/crear_producto.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/crear_producto.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/usuario/favoritos.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/favoritos.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/usuario/mis_productos.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/mis_productos.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,12 +54,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="package-info" />
-        <option value="CSS File" />
         <option value="XHTML File" />
-        <option value="Interface" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -72,32 +69,13 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="JPA Inspector" value="true" />
-        <entry key="JPA Palette" value="true" />
-        <entry key="JPA Structure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="JPA Inspector" value="true" />
-        <entry key="JPA Palette" value="true" />
-        <entry key="JPA Structure" value="false" />
-      </map>
-    </option>
-  </component>
-  <component name="ProjectId" id="1yMgB2M1cZzbI0PC7DK5YcZVhor" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="21jtFwaNSXWbq6hU3wSXOLYKkEf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -106,90 +84,19 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/negocio/src/test/java/co/edu/uniquindio/proyecto/test" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\negocio\src\test\java\co\edu\uniquindio\proyecto\test" />
-      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\negocio\src\main\java\co\edu\uniquindio\proyecto\servicios" />
-      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\persistencia\src\main\java\co\edu\uniquindio\proyecto\entidades" />
-      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\java\co\edu\uniquindio\proyecto\converter" />
-      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\java\co\edu\uniquindio\proyecto\config" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\uploads" />
-      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\resources\js" />
-      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\resources\css" />
-      <recent name="C:\Users\Jarvinson\Documents\ING\VIII\ProgAvanzada\proyecto-final\web\src\main\webapp\js" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Spring Boot.WebApplication">
-    <configuration name="AdministradorServicioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="negocio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.AdministradorServicioTest" />
-      <option name="TEST_OBJECT" value="class" />
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdministradorServicioTest.registrarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="negocio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.AdministradorServicioTest" />
-      <option name="METHOD_NAME" value="registrarTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CiudadServicioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="negocio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.CiudadServicioTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CiudadServicioTest.registrarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="negocio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.proyecto.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="co.edu.uniquindio.proyecto.test" />
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.proyecto.test.CiudadServicioTest" />
-      <option name="METHOD_NAME" value="registrarTest" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -210,103 +117,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.CiudadServicioTest.registrarTest" />
-      <item itemvalue="JUnit.CiudadServicioTest" />
-      <item itemvalue="JUnit.AdministradorServicioTest.registrarTest" />
-      <item itemvalue="JUnit.AdministradorServicioTest" />
-      <item itemvalue="Spring Boot.WebApplication" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.WebApplication" />
-        <item itemvalue="JUnit.AdministradorServicioTest" />
-        <item itemvalue="JUnit.AdministradorServicioTest.registrarTest" />
-        <item itemvalue="JUnit.CiudadServicioTest.registrarTest" />
-        <item itemvalue="JUnit.CiudadServicioTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="30ae3a7a-3bec-4393-88da-36c9dc994e00" name="Changes" comment="" />
-      <created>1632066734036</created>
+      <changelist id="c3b10527-4576-49c3-aa5d-af29b01d894e" name="Changes" comment="" />
+      <created>1638466233025</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1632066734036</updated>
-      <workItem from="1632066735692" duration="2561000" />
-      <workItem from="1632195461811" duration="76000" />
-      <workItem from="1632441438687" duration="2252000" />
-      <workItem from="1632597745666" duration="5191000" />
-      <workItem from="1632884314860" duration="1326000" />
-      <workItem from="1632888208589" duration="4000" />
-      <workItem from="1633045194818" duration="70000" />
-      <workItem from="1633045639495" duration="203000" />
-      <workItem from="1633045883797" duration="589000" />
-      <workItem from="1633091885043" duration="1909000" />
-      <workItem from="1633143226589" duration="3777000" />
-      <workItem from="1633212992948" duration="5592000" />
-      <workItem from="1633279402256" duration="5117000" />
-      <workItem from="1633392147171" duration="3411000" />
-      <workItem from="1633398301141" duration="1688000" />
-      <workItem from="1633794273676" duration="16298000" />
-      <workItem from="1633814046657" duration="610000" />
-      <workItem from="1633814713830" duration="885000" />
-      <workItem from="1633884151975" duration="678000" />
-      <workItem from="1633885361413" duration="1308000" />
-      <workItem from="1633887256378" duration="809000" />
-      <workItem from="1633972670984" duration="1685000" />
-      <workItem from="1633977375086" duration="97000" />
-      <workItem from="1633977487250" duration="414000" />
-      <workItem from="1633977965157" duration="36000" />
-      <workItem from="1633978175621" duration="28000" />
-      <workItem from="1633978220354" duration="7000" />
-      <workItem from="1633978239345" duration="1009000" />
-      <workItem from="1633981673704" duration="91000" />
-      <workItem from="1633981779844" duration="1338000" />
-      <workItem from="1633884151975" duration="7519000" />
-      <workItem from="1634161921692" duration="626000" />
-      <workItem from="1634142063404" duration="428000" />
-      <workItem from="1634152171446" duration="2333000" />
-      <workItem from="1634155239324" duration="351000" />
-      <workItem from="1634155612642" duration="8283000" />
-      <workItem from="1634253201587" duration="3312000" />
-      <workItem from="1634318955758" duration="3731000" />
-      <workItem from="1634322790561" duration="529000" />
-      <workItem from="1634494979483" duration="9303000" />
-      <workItem from="1634516859851" duration="13429000" />
-      <workItem from="1634606210679" duration="68000" />
-      <workItem from="1634784878536" duration="294000" />
-      <workItem from="1634516859851" duration="13374000" />
-      <workItem from="1634602551045" duration="453000" />
-      <workItem from="1634603026970" duration="2679000" />
-      <workItem from="1635214787190" duration="7808000" />
-      <workItem from="1635259533585" duration="4267000" />
-      <workItem from="1635785492406" duration="2933000" />
-      <workItem from="1635788726568" duration="10592000" />
-      <workItem from="1636068762077" duration="3456000" />
-      <workItem from="1636219501663" duration="3423000" />
-      <workItem from="1636227030153" duration="2326000" />
-      <workItem from="1636428114749" duration="1806000" />
-      <workItem from="1635788726568" duration="10486000" />
-      <workItem from="1636327229873" duration="7331000" />
-      <workItem from="1636477851781" duration="1569000" />
-      <workItem from="1636563753544" duration="5064000" />
-      <workItem from="1636672026120" duration="2099000" />
-      <workItem from="1636829562249" duration="14261000" />
-      <workItem from="1636918190684" duration="6164000" />
-      <workItem from="1637276794958" duration="5058000" />
-      <workItem from="1637291771431" duration="4217000" />
-      <workItem from="1637296078315" duration="2746000" />
-      <workItem from="1637329685225" duration="597000" />
-      <workItem from="1637338660801" duration="2430000" />
-      <workItem from="1637181291536" duration="4287000" />
-      <workItem from="1637266008216" duration="4552000" />
-      <workItem from="1637376773634" duration="9623000" />
-      <workItem from="1637447216206" duration="8997000" />
-      <workItem from="1637520275269" duration="13374000" />
-      <workItem from="1638228046384" duration="2573000" />
+      <updated>1638466233025</updated>
+      <workItem from="1638466238556" duration="316000" />
+      <workItem from="1638466599423" duration="4563000" />
+      <workItem from="1638481335039" duration="5724000" />
+      <workItem from="1638501715588" duration="8314000" />
+      <workItem from="1638548241146" duration="5382000" />
+      <workItem from="1638571261781" duration="12143000" />
     </task>
     <servers />
   </component>
@@ -323,28 +153,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="4" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.StackOverflowError" package="java.lang" />
-          <option name="timeStamp" value="5" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/WebApplication.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

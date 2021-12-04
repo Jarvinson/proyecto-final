@@ -76,7 +76,9 @@ public class DetalleProductoBean implements Serializable {
     }
 
     public Integer getCalificacionPromedio(){
+
         try {
+            System.out.println(comentarioServicio.calificacionPromedio(codigoProducto));
            return comentarioServicio.calificacionPromedio(codigoProducto);
         } catch (Exception e) {
             e.printStackTrace();

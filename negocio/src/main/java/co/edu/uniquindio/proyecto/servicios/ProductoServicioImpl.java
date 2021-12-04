@@ -53,7 +53,6 @@ public class ProductoServicioImpl implements ProductoServicio  {
         if (buscado.isEmpty()) {
             throw new Exception("El producto no existe");
         }
-
         return productoRepo.save(p);
 
     }
@@ -72,6 +71,11 @@ public class ProductoServicioImpl implements ProductoServicio  {
     @Override
     public Producto obtenerProducto(Integer codigo) throws Exception {
         return productoRepo.findById(codigo).orElseThrow(() -> new Exception("El código del producto no es válido"));
+    }
+
+    @Override
+    public String obtenerCategoria(Integer codigo) throws Exception {
+        return productoRepo.obtenerCatgoria(codigo);
     }
 
     @Override
@@ -116,12 +120,14 @@ public class ProductoServicioImpl implements ProductoServicio  {
            List<Producto> productosF;
            productosF = usuario1.getProductosFavoritos();
            productosF.remove(producto);
-           productoRepo.eliminarFavoritos(producto.getCodigo(), usuario.getCodigo());
 
+           //productoRepo.eliminarFavoritos(producto.getCodigo(), usuario.getCodigo());
+           usuarioRepo.save(usuario1).setProductosFavoritos(productosF);
            /**
            usuario1.getProductosFavoritos().clear();
            for (Producto p: productosF) {
                usuario1.getProductosFavoritos().add(p);
+
            }
             */
            System.out.println(usuario1.getProductosFavoritos().size()+"!!!!!!!!!!!!!!!!");

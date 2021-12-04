@@ -1,9 +1,7 @@
 package co.edu.uniquindio.proyecto.converter;
 
 import co.edu.uniquindio.proyecto.entidades.Categoria;
-import co.edu.uniquindio.proyecto.entidades.Ciudad;
 import co.edu.uniquindio.proyecto.servicios.CategoriaServicio;
-import co.edu.uniquindio.proyecto.servicios.CiudadServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -5,6 +5,7 @@ import co.edu.uniquindio.proyecto.dto.ProductosPorUsuario;
 import co.edu.uniquindio.proyecto.entidades.Categoria;
 import co.edu.uniquindio.proyecto.entidades.Producto;
 import co.edu.uniquindio.proyecto.entidades.Usuario;
+import org.hibernate.sql.Select;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -65,4 +66,7 @@ public interface ProductoRepo extends JpaRepository<Producto, Integer> {
 
     @Query("delete from Usuario u where u.productosFavoritos in (select p from Producto p where p.codigo = :id and u.codigo = :codigo)")
     void eliminarFavoritos(Integer id, Integer codigo);
+
+    @Query("Select c.nombre from Producto p join p.categoria c where p.codigo = :codigo" )
+    String obtenerCatgoria(Integer codigo);
 }

@@ -108,4 +108,17 @@ public class UsuarioServicioImpl implements UsuarioServicio{
       return usuarioRepo.findByEmailAndPassword(email, password).orElseThrow(() -> new Exception("Los datos de autenticación son incorrectos"));
 
     }
+
+    @Override
+    public Usuario obtenerUsuarioUsername(String username) throws Exception {
+        if (username.isEmpty()){
+            throw new Exception("Debe ingresar un username");
+        }
+        Usuario usuario = usuarioRepo.obtenerUsuarioUsername(username);
+
+        if (usuario == null){
+            throw new Exception("El username no existe");
+        }
+        return usuario;
+    }
 }

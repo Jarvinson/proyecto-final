@@ -25,7 +25,7 @@ public class Categoria implements Serializable {
     @Column(nullable = false, length = 100)
     private  String nombre;
 
-    @ManyToMany(mappedBy = "categoria")
+    @ManyToMany(mappedBy = "categoria", fetch=FetchType.EAGER)
     @ToString.Exclude
     private List<Producto> producto;
 

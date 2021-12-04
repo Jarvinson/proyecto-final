@@ -3,9 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/negocio/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/persistencia/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/persistencia/src/main/resources/application.properties" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/web/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/web/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/web/src/main/resources/application.properties" charset="windows-1252" />
   </component>
 </project>

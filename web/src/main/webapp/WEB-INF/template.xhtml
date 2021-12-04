@@ -71,10 +71,6 @@
                             </a>
                         </li>
                         <li >
-                            <a href="/usuario/carrito.xhtml" class="nav-link text-white">
-                                <i class="pi pi-tag bi d-block mx-auto mb-1 icon-menu" ></i>
-                                Categorias
-                            </a>
                         </li>
                     </ul>
                 </div>
@@ -125,15 +121,22 @@
                 <p:commandButton value="Iniciar Sesión" action="#{seguridadBean.iniciarSesion}"
                                  styleClass="mt-4 align-content-center" update="@form" icon="pi pi-sign-in" iconPos="left" />
             </div>
-
-            <div align="center">
-                <p:commandLink id="ajax" update="@form" action="Ok" style="margin-right:30px;">
-                    <h:outputText value="¿Olvidaste tu contraseña?"/>
-                </p:commandLink>
-            </div>
             <p:growl for="login-bean" showDetail="true" />
         </h:form>
+
+        <h:form>
+        <div align="center">
+            <p:growl id="growl" life="2000"/>
+            <p:commandLink id="ajax" update="growl" action="#{usuarioBean.irPassword}" style="margin-right:20px;">
+                <h:outputText value="¿Olvidaste tu contraseña?"/>
+            </p:commandLink>
+        </div>
+        <p:growl for="password" showDetail="true" />
+        </h:form>
+
     </p:dialog>
+
+
 
     <div id="content">
         <div class="container">

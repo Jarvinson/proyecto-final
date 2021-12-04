@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="WEB-INF/template.xhtml">
+    <ui:define name="title">Recuperar contraseña</ui:define>
+    <ui:define name="content">
+
+        <h1>Recuperar contraseña<br/></h1>
+        <p:fieldset >
+        <p class="p-m-0">
+            <br/>Si olvidaste tu clave podrás ingresar luego de confirmar que la cuenta te pertenece.
+            <br/><br/>1. Escribe tu username.
+            <br/><br/>2. Revisa el correo con el cual te registraste, allí te enviaremos la contraseña
+        </p>
+
+
+        </p:fieldset>
+        <h:form>
+        <div class="p-col-12 p-md-4">
+            <div class="ui-inputgroup">
+                <div class="ui-inputgroup-addon"><i class="pi pi-user"></i></div>
+                <p:inputText id="pass" placeholder="Username" value="#{usuarioBean.userName}" required="true"/>
+                <p:commandButton  icon="pi pi-check" styleClass="ui-button-success" update="@form" action="#{usuarioBean.recuperarContraseña()}"/>
+                <p:growl for="password" showDetail="true" />
+            </div>
+        </div>
+        </h:form>
+
+
+
+    </ui:define>
+
+</ui:composition>
+</html>
