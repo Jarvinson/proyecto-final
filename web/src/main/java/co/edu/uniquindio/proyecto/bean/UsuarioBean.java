@@ -7,6 +7,7 @@ import co.edu.uniquindio.proyecto.servicios.CiudadServicio;
 
 import co.edu.uniquindio.proyecto.entidades.Usuario;
 
+import co.edu.uniquindio.proyecto.servicios.EmailSenderService;
 import co.edu.uniquindio.proyecto.servicios.UsuarioServicio;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,6 +40,9 @@ public class UsuarioBean implements Serializable {
     @Autowired
     private CiudadServicio ciudadServicio;
 
+    @Autowired
+    private EmailSenderService emailSenderService;
+
     @PostConstruct
     public void inicializar() {
 
@@ -63,14 +67,25 @@ public class UsuarioBean implements Serializable {
     public void recuperarContraseña( ){
 
         try {
-            usuarioServicio.obtenerUsuarioUsername(userName);
-            FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alert", "Registro exitoso");
+            usuario = usuarioServicio.obtenerUsuarioUsername(userName.trim());
+
+            String mensaje = "<h1>UNISHOP</h1>";
+
+            mensaje += "<h2>Hola, " + usuario.getNombre() + "</h2>"
+                    + "<h3></br>Tu contraseña es: " + usuario.getPassword() + "</h3>"
+                    + "</h2></br></br>Atentamente, "
+                    + "<h3>UNISHOP</h3>";
+
+            emailSenderService.sendSimpleEmail("jarvinsonv30@gmail.com", mensaje,
+                    "Recuperar contraseña");
+            FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alert", "Contraseña enviada al correo electrónico");
             FacesContext.getCurrentInstance().addMessage("password", facesMsg);
         } catch (Exception e) {
             FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alert", e.getMessage());
             FacesContext.getCurrentInstance().addMessage("password", facesMsg);
         }
     }
+
 
     public String irPassword() {
         return "/recuperar_contraseña?faces-redirect=true&amp";

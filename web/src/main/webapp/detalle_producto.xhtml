@@ -27,17 +27,21 @@
                     <div class="box">
 
                         <h1 class="mt-4" >#{detalleProductoBean.producto.nombre}</h1>
+                        <p:rating style="" value="#{detalleProductoBean.calificacionPromedio}" readonly="true" />
                         <h:form>
-                        <h2 class="mt-4">$#{detalleProductoBean.producto.precio}</h2>
+                            <del style="color: #5c636a">
+                        <p style="margin-bottom: -5% "  class="mt-4"  >$#{detalleProductoBean.producto.precio}</p>
+                            </del>
+                            <h3 style="margin-bottom: -5%" class="mt-4" >$#{detalleProductoBean.producto.precio - ((detalleProductoBean.producto.descuento / 100) * detalleProductoBean.producto.precio) }</h3>
                         <h4 class="mt-4" style="font-family:Constantia; color: forestgreen ">#{detalleProductoBean.producto.descuento}% OFF</h4>
                         </h:form>
-                        <p:rating value="#{detalleProductoBean.calificacionPromedio}" readonly="true" />
+
 
                         <h:form class="mt-4" rendered="#{seguridadBean.autenticado}">
                             <p:commandButton value="Añadir al carrito" icon="pi pi-shopping-cart" update="@form"
                                              action="#{seguridadBean.agregarCarrito(detalleProductoBean.producto.codigo, detalleProductoBean.producto.precio, detalleProductoBean.producto.nombre, detalleProductoBean.producto.imagenPrincipal)}"/>
                             <p:growl for="add-cart" showDetail="true"/>
-                            <p:commandButton  icon="pi pi-heart" styleClass="rounded-button ui-button-help ui-button-flat"
+                            <p:commandButton  icon="pi pi-heart" update="@form" styleClass="rounded-button ui-button-help ui-button-flat"
                                               action="#{seguridadBean.productosFavoritos(detalleProductoBean.producto)}"/>
                             <p:growl for="favorites" showDetail="true"/>
                         </h:form>

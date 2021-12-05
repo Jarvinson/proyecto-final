@@ -32,6 +32,12 @@
                                 Home
                             </a>
                         </li>
+                        <li>
+                            <a href="/categorias.xhtml" class="nav-link text-white">
+                                <i class="pi pi-tags bi d-block mx-auto mb-1 icon-menu" ></i>
+                                Categorias
+                            </a>
+                        </li>
                         <li jsf:rendered="#{seguridadBean.autenticado}">
                             <a href="/usuario/crear_producto.xhtml" class="nav-link text-white">
                                 <i class="pi pi-plus bi d-block mx-auto mb-1 icon-menu" ></i>
@@ -59,11 +65,12 @@
                             </a>
                         </li>
                         <li jsf:rendered="#{seguridadBean.autenticado}">
-                            <a href="/usuario/perfil.xhtml" class="nav-link text-white">
-                                <i class="pi pi-user-plus bi d-block mx-auto mb-1 icon-menu" ></i>
-                                Perfil
+                            <a href="/usuario/subasta.xhtml" class="nav-link text-white">
+                                <i class="pi pi-money-bill bi d-block mx-auto mb-1 icon-menu" ></i>
+                                Subastas
                             </a>
                         </li>
+
                         <li jsf:rendered="#{seguridadBean.autenticado}">
                             <a href="/usuario/carrito.xhtml" class="nav-link text-white">
                                 <i class="pi pi-shopping-cart bi d-block mx-auto mb-1 icon-menu" ></i>

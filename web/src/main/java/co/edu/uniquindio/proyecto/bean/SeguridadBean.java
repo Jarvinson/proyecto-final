@@ -18,6 +18,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.mail.MessagingException;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -53,8 +54,20 @@ public class SeguridadBean implements Serializable{
     @Autowired
     private EmailSenderService emailSenderService;
 
+    @Autowired
+    private SubastaServicio subastaServicio;
+
+    @Getter @Setter
+    private SubastaUsuario subastaUsuario;
+
     @Getter @Setter
     private List<String> medioPago;
+
+    @Getter @Setter
+    private List<SubastaUsuario> subastasUsuarios;
+
+    @Getter @Setter
+    private List<Producto> productosSubasta;
 
     @Getter @Setter
     private ArrayList<ProductoCarrito> productosCarrito;
@@ -72,6 +85,12 @@ public class SeguridadBean implements Serializable{
     private List<Producto> selectedProducts;
 
     @Getter @Setter
+    private LocalDate fechaLimite, fechaSubasta;
+
+    @Getter @Setter
+    private double valorSubasta;
+
+    @Getter @Setter
     private Double subTotal;
 
     @Getter @Setter
@@ -83,12 +102,20 @@ public class SeguridadBean implements Serializable{
 
     @PostConstruct
     void inicializar(){
+        this.medioP = "";
         this.subTotal = 0.0;
+        this.valorSubasta = 0.0;
+        this.fechaLimite = null;
+        this.fechaSubasta = null;
         this.productosCarrito = new ArrayList<>();
         this.comprasUsuario = new ArrayList<>();
         this.productosFavoritos = new ArrayList<>();
         this.productosUsuarios = new ArrayList<>();
+        this.subastaUsuario = new SubastaUsuario();
+        this.subastasUsuarios = new ArrayList<>();
+        this.productosSubasta = new ArrayList<>();
         this.medioPago = new ArrayList<>();
+
     }
 
     public String iniciarSesion(){
@@ -99,6 +126,7 @@ public class SeguridadBean implements Serializable{
                 comprasUsuario();
                 listarProductosFavoritos();
                 listarProductosUsuario();
+                listarProductosSubasta();
                 return "/index?faces-redirect=true";
             } catch (Exception e) {
                 FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alert", e.getMessage());
@@ -153,15 +181,12 @@ public class SeguridadBean implements Serializable{
         if(usuarioSesion != null && !productosCarrito.isEmpty()){
             try {
                 productoServicio.realizarCompra(usuarioSesion, productosCarrito, "PSE" );
-                triggerMail();
-                System.out.println(productosCompra()+"1111111111");
-                productosCarrito.clear();
                 subTotal =0.0;
                 FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alert", "Compra realizada");
                 FacesContext.getCurrentInstance().addMessage("compra-msj", fm);
+                triggerMail();
+                productosCarrito.clear();
                 productosCompra();
-
-
 
             } catch (Exception e) {
                 FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alert", e.getMessage());
@@ -201,7 +226,6 @@ public class SeguridadBean implements Serializable{
             for (Producto p: productoServicio.listarProductosUsuario(usuarioSesion.getCodigo())) {
                 if(!productosUsuarios.contains(p)){
                     productosUsuarios.add(p);
-                    System.out.println(p.getImagenPrincipal());
                 }
             }
         }catch (Exception e){
@@ -271,6 +295,17 @@ public class SeguridadBean implements Serializable{
         PrimeFaces.current().ajax().update("form:messages", "form:dt-products");
     }
 
+    public void updateSubasta(){
+        try {
+            productoServicio.actualizarProducto(this.producto);
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Oferta subasta Actualizada"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        PrimeFaces.current().executeScript("PF('manageProductDialog').hide()");
+        PrimeFaces.current().ajax().update("form:messages", "form:dt-products");
+    }
+
     public Integer getCalificacionPromedio(int codigo){
         try {
             return comentarioServicio.calificacionPromedio(codigo);
@@ -320,7 +355,30 @@ public class SeguridadBean implements Serializable{
         return nombre;
     }
 
+    public void crearSubasta(int codigo){
 
+        if(usuarioSesion != null ){
+            try {
+                Producto producto1 = productoServicio.obtenerProducto(codigo);
+                subastaServicio.crearSubasta(fechaLimite, producto1, usuarioSesion, valorSubasta, fechaSubasta);
+                FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alert", "Subasta creada");
+                FacesContext.getCurrentInstance().addMessage("subasta-msj", fm);
+                productosSubasta.clear();
+                listarProductosSubasta();
+
+            } catch (Exception e) {
+                FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alert", e.getMessage());
+                FacesContext.getCurrentInstance().addMessage("subasta-msj", fm);
+            }
+        }
+    }
+
+    private void listarProductosSubasta(){
+        for (Subasta s: subastaServicio.listarSubastas()) {
+            productosSubasta.add(s.getProducto());
+
+        }
+    }
 }
 
 

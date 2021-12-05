@@ -46,8 +46,14 @@ public interface ProductoRepo extends JpaRepository<Producto, Integer> {
 
     List<Producto> findByNombreContains(String nombre);
 
-    @Query("select p from Producto p where p.nombre like concat('%', :nombre, '%') ")
+    @Query("select p from Producto p join p.categoria c where p.nombre like concat('%', :nombre, '%') or c.nombre like concat('%', :nombre, '%') ")
     List<Producto> buscarProductoNombre(String nombre);
+
+    @Query("select p from Producto p join p.categoria c where c.nombre like concat('%', :nombre, '%') ")
+    List<Producto> buscarProductoCategoria(String nombre);
+
+    @Query("select p from Producto p where p.precio = :nombre")
+    List<Producto> buscarProductosPrecio(double nombre);
 
     @Query("select new co.edu.uniquindio.proyecto.dto.ProductosPorUsuario (p.vendedor.codigo, p.vendedor.email, count(p)) from Producto p group by p.vendedor")
     List<ProductosPorUsuario> obtenerProductoEnVenta();

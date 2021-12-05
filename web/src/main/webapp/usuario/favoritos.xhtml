@@ -38,12 +38,12 @@
                                     <h:outputText value="#{favoritos.nombre}" style="font-weight:bold" />
                                     <h:outputText value="$#{favoritos.precio}" />
                                     <h:outputText value="#{favoritos.nombrePublicacion}" />
-                                    <p:rating value="#{seguridadBean.getCalificacionPromedio(favoritos.codigo)}" readonly="true"/>
+                                    <h:outputText style="color: forestgreen" value="#{favoritos.descuento}% OFF" />
                                 </h:panelGrid>
                             </p:outputPanel>
                             <div class="text-end">
                                 <p:commandButton icon="pi pi-trash" styleClass="btn btn-primary  me-2" update="@form" action="#{seguridadBean.elimanarFavorito(favoritos.codigo)}" />
-                                <p:button icon="pi pi-check" styleClass="btn btn-primary  me-2"/>
+                                <p:commandButton icon="pi pi-arrow-right" action="#{inicioBean.irAlDetalle(favoritos.codigo)}" styleClass="btn btn-primary  me-2"/>
                             </div>
                         </div>
                     </div>

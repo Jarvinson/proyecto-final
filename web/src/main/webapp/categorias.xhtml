@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="/WEB-INF/template.xhtml">
+<ui:define name="title">Categorías</ui:define>
+<ui:define name="content">
+    <h2>Categorías</h2>
+
+    <script type="text/javascript">
+        function handleDrop(event, ui) {
+            var droppedProduct = ui.draggable;
+            droppedProduct.fadeOut('fast');
+        }
+    </script>
+
+    <div class="card">
+        <h:form id="productForm">
+            <p:dataView id="availableProducts" var="category" value="#{inicioBean.categoriaList}" paginator="true" rows="6" layout="grid" gridIcon="pi pi-th-large" >
+                <p:dataViewGridItem>
+                    <p:panel id="pnl" header="#{category.nombre}" style="text-align:center">
+                        <h:panelGrid columns="1" style="width:100%">
+                           <p:graphicImage url="/uploads/categories/#{category.imagen}" styleClass="imagen-producto"/>
+                            <p:commandButton value="Ver" update="@form" action="#{busquedaBean.buscarC(category.nombre)}" icon="pi pi-arrow-right" styleClass="rounded-button ui-button-flat" />
+                        </h:panelGrid>
+                    </p:panel>
+
+                </p:dataViewGridItem>
+            </p:dataView>
+
+            <p:dialog header="Product Detail" widgetVar="productDialog" resizable="false" draggable="false"
+                      showEffect="fade" hideEffect="fade" modal="true">
+
+            </p:dialog>
+        </h:form>
+    </div>
+</ui:define>
+</ui:composition>
+</html>

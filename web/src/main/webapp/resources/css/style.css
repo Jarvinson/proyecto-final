@@ -4,7 +4,9 @@
 
 .imagen-producto{
     max-width: 150px;
+
 }
+
 .item-pro{
     margin-top: 5px;
     margin-bottom: 5px;
@@ -26,6 +28,7 @@
 }
 .imagen-default{
  max-width: 90%;
+
 }
 .card-text{
     min-height: 48px;

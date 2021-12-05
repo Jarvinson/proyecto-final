@@ -142,6 +142,16 @@ public class ProductoServicioImpl implements ProductoServicio  {
     }
 
     @Override
+    public List<Producto> buscarProductoCategoria(String categoriaProducto, String[] filtros) {
+        return productoRepo.buscarProductoCategoria(categoriaProducto);
+    }
+
+    @Override
+    public List<Producto> buscarProductosPrecio(int precioProducto, String[] filtros) {
+        return productoRepo.buscarProductosPrecio(precioProducto);
+    }
+
+    @Override
     public List<Producto> listarProductosUsuario(Integer codigo) throws Exception {
         return productoRepo.listarProductosUsuario(codigo);
     }

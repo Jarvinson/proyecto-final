@@ -66,6 +66,7 @@ public class Producto implements Serializable {
     private List<Usuario> usuarios;
 
     @ManyToMany
+    @ToString.Exclude
     private List<Categoria>categoria = new ArrayList<>();
 
     @ManyToOne

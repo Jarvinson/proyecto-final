@@ -34,14 +34,13 @@
                         </div>
                         <div class="col-lg-8 col-md-1 align-self-center" >
                             <p:outputPanel>
-                                <h:panelGrid columns="2" cellpadding="5">
-                                    <h:outputText value="Nombre:" />
-                                    <h:outputText value="#{producto.nombre}" style="font-weight:bold" />
-                                    <h:outputText value="Precio:" />
+                                <h:panelGrid columns="1" cellpadding="2">
+                                    <h:outputText value="#{producto.nombre}" style="font-weight:bold"/>
                                     <h:outputText value="$#{producto.precio}" />
-                                    <h:outputText value="Categorías:" />
-                                    <h:outputText value="#{producto.categoria}" var="categoria"  />
+                                    <h:outputText style="color: forestgreen" value="#{producto.descuento}% OFF" />
                                 </h:panelGrid>
+                                <i class="pi pi-tag product-category-icon" style="font-weight: bolder"/><h:outputText
+                                    value=" #{producto.nameCategory}" var="categoria" />
                             </p:outputPanel>
                         </div>
                         <div class="col-lg-2 col-md-1 align-self-center" >

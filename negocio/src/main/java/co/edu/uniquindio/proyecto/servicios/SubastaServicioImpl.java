@@ -1,11 +1,15 @@
 package co.edu.uniquindio.proyecto.servicios;
 
-import co.edu.uniquindio.proyecto.entidades.Compra;
-import co.edu.uniquindio.proyecto.entidades.Subasta;
+import co.edu.uniquindio.proyecto.dto.ProductoCarrito;
+import co.edu.uniquindio.proyecto.entidades.*;
 import co.edu.uniquindio.proyecto.repositorios.SubastaRepo;
+import co.edu.uniquindio.proyecto.repositorios.SubastaUsuarioRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,6 +18,9 @@ public class SubastaServicioImpl implements SubastaServicio{
 
     @Autowired
     private SubastaRepo subastaRepo;
+
+    @Autowired
+    private SubastaUsuarioRepo subastaUsuarioRepo;
 
     @Override
     public Subasta registrarSubasta(Subasta s) throws Exception {
@@ -63,5 +70,31 @@ public class SubastaServicioImpl implements SubastaServicio{
     @Override
     public List<Subasta> listarSubastasDisponibles() {
         return subastaRepo.listarSubastasDisponibles();
+    }
+
+    @Override
+    public Subasta crearSubasta(LocalDate fechaLimite, Producto producto, Usuario usuario, double valor, LocalDate fechaSubasta) throws Exception {
+       try {
+           Subasta subasta = new Subasta();
+           subasta.setProducto(producto);
+           subasta.setFechaLimite(fechaLimite);
+
+           Subasta subastaGuardada = subastaRepo.save(subasta);
+
+           SubastaUsuario su;
+
+                su = new SubastaUsuario();
+                su.setUsuario(usuario);
+                su.setValor(valor);
+                su.setFechaSubasta(fechaSubasta);
+                su.setSubasta(subasta);
+
+               subastaUsuarioRepo.save(su);
+
+            return subastaGuardada;
+
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
     }
 }
