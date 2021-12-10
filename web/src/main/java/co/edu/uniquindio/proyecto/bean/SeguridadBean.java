@@ -181,10 +181,10 @@ public class SeguridadBean implements Serializable{
         if(usuarioSesion != null && !productosCarrito.isEmpty()){
             try {
                 productoServicio.realizarCompra(usuarioSesion, productosCarrito, "PSE" );
-                subTotal =0.0;
                 FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alert", "Compra realizada");
                 FacesContext.getCurrentInstance().addMessage("compra-msj", fm);
                 triggerMail();
+                subTotal =0.0;
                 productosCarrito.clear();
                 productosCompra();
 
@@ -379,6 +379,8 @@ public class SeguridadBean implements Serializable{
 
         }
     }
+
+
 }
 
 

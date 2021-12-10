@@ -70,6 +70,12 @@
                                 Subastas
                             </a>
                         </li>
+                        <li jsf:rendered="#{seguridadBean.autenticado}">
+                            <a href="/usuario/reportes.xhtml" class="nav-link text-white">
+                                <i class="pi pi-folder-open bi d-block mx-auto mb-1 icon-menu" ></i>
+                                Reportes
+                            </a>
+                        </li>
 
                         <li jsf:rendered="#{seguridadBean.autenticado}">
                             <a href="/usuario/carrito.xhtml" class="nav-link text-white">

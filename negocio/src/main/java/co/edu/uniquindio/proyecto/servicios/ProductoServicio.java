@@ -31,11 +31,15 @@ public interface ProductoServicio {
 
     List<Producto> buscarProductos(String nombreProducto, String[] filtros) ;
 
-    List<Producto> buscarProductoCategoria(String nombreProducto, String[] filtros) ;
+    List<Producto> buscarProductoCategoria(String nombreProducto) ;
 
-    List<Producto> buscarProductosPrecio(int nombreProducto, String[] filtros) ;
+    List<Producto> productosPorDescuento(double precio);
+
+    List<Producto> buscarProductosPrecio(double precio1, double precio2);
 
     List<Producto> listarProductosUsuario(Integer codigo) throws Exception;
+
+    List<Producto> productosPorCiudad(String nombre);
 
     Compra realizarCompra(Usuario usuario, ArrayList<ProductoCarrito> productos, String medioPago) throws Exception;
 

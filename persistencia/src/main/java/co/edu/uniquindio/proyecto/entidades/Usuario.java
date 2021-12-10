@@ -1,5 +1,7 @@
 package co.edu.uniquindio.proyecto.entidades;
 
+import com.fasterxml.jackson.annotation.JacksonAnnotation;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import net.bytebuddy.implementation.bind.annotation.SuperCall;
 
@@ -22,14 +24,17 @@ public class Usuario extends Persona implements Serializable {
 
     @OneToMany(mappedBy = "usuario")
     @ToString.Exclude
+    @JsonIgnore
     private List<Comentario> comentarioList;
 
     @OneToMany(mappedBy = "vendedor")
     @ToString.Exclude
+    @JsonIgnore
     private List<Producto>productoList;
 
     @ManyToMany
     @ToString.Exclude
+    @JsonIgnore
     private List<Producto>productosFavoritos;
 
     @ManyToOne
@@ -38,18 +43,22 @@ public class Usuario extends Persona implements Serializable {
 
     @OneToMany(mappedBy = "usuario")
     @ToString.Exclude
+    @JsonIgnore
     private List<Compra> compra;
 
     @OneToMany(mappedBy = "usuario")
     @ToString.Exclude
+    @JsonIgnore
     private List<SubastaUsuario> subastaUsuario;
 
     @OneToMany(mappedBy = "usuario")
     @ToString.Exclude
+    @JsonIgnore
     private List<Chat> chats;
 
-    @ElementCollection(fetch = FetchType.EAGER) //Etiqueta que permite la normalizacion del atributo telefono
-    private Map<String, String> numTelefonos;
+    @ElementCollection //Etiqueta que permite la normalizacion del atributo telefono
+    @JsonIgnore
+    private List<String> numTelefonos;
 
     // Este es el constructor de la clase Usuario
     public Usuario(Integer codigo, String nombre, String email, String password, String username, Ciudad ciudad) {

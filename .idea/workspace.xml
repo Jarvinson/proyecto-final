@@ -5,38 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3b10527-4576-49c3-aa5d-af29b01d894e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/dto/CategoriaList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/dto/Subastar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/converter/ProductoConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/categorias.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/categories/constru.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/categories/deporte.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/categories/herramientas.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/categories/hogar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/categories/moda.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/categories/tecnologia.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/uploads/categories/vehi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/crear_subasta.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/subasta.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/ReporteBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/dto/Mensaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/rest/ProductoRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/rest/UsuarioRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/reportes.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/ProductoServicioImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/SubastaServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/SubastaServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/SubastaServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/negocio/src/main/java/co/edu/uniquindio/proyecto/servicios/SubastaServicioImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CompraRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CompraRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ProductoRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ProductoRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/BusquedaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/BusquedaBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/InicioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/InicioBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/SeguridadBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/SeguridadBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/UsuarioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/proyecto/bean/UsuarioBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/template.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/template.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/detalle_producto.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/detalle_producto.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resultado_busqueda.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resultado_busqueda.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/usuario/carrito.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/carrito.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/usuario/favoritos.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/usuario/favoritos.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/uploads/audifonos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/uploads/nike.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +127,11 @@
       <workItem from="1638548241146" duration="5382000" />
       <workItem from="1638571261781" duration="21572000" />
       <workItem from="1638636240792" duration="25956000" />
-      <workItem from="1638666305510" duration="1822000" />
+      <workItem from="1638666305510" duration="2417000" />
+      <workItem from="1638737295030" duration="7445000" />
+      <workItem from="1638919651015" duration="8573000" />
+      <workItem from="1638981933278" duration="25368000" />
+      <workItem from="1639093626469" duration="2154000" />
     </task>
     <servers />
   </component>

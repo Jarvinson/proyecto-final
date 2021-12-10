@@ -1,5 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -63,32 +64,39 @@ public class Producto implements Serializable {
 
     @ManyToMany(mappedBy = "productosFavoritos")
     @ToString.Exclude
+    @JsonIgnore
     private List<Usuario> usuarios;
 
     @ManyToMany
     @ToString.Exclude
+    @JsonIgnore
     private List<Categoria>categoria = new ArrayList<>();
 
     @ManyToOne
     private Ciudad ciudad;
 
     @ElementCollection(fetch=FetchType.EAGER)
+    @JsonIgnore
     private List<String> imagenes;
 
     @OneToMany(mappedBy = "producto")
     @ToString.Exclude
+    @JsonIgnore
     private List<Comentario> comentarioList;
 
     @OneToMany(mappedBy = "producto")
     @ToString.Exclude
+    @JsonIgnore
     private List<DetalleCompra> compra;
 
     @OneToMany(mappedBy = "producto")
     @ToString.Exclude
+    @JsonIgnore
     private List<Subasta> subasta;
 
     @OneToMany(mappedBy = "producto")
     @ToString.Exclude
+    @JsonIgnore
     private List<Chat> chats;
     // Este es el constructor de la clase Producto
 
@@ -116,6 +124,15 @@ public class Producto implements Serializable {
                 return name.getNombre();
         }
         return  null;
+    }
+
+    public Integer calificacionPromedio(){
+        int calificacion = 0;
+
+        for (Comentario c: getComentarioList()) {
+            calificacion += c.getCalificacion();
+        }
+        return calificacion/getComentarioList().size();
     }
 
 

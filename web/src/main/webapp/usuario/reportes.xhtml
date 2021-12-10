@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="../WEB-INF/template.xhtml">
+<ui:define name="title">Reportes Unishop</ui:define>
+<ui:define name="content">
+    <h1>Reportes Unishop</h1>
+
+    <div class="p-grid">
+
+        <div class="p-col-12 p-lg-6 p-xl-4">
+            <div class="card">
+                <h5>Número de pruductos vendidos por mes</h5><br/>
+                <p:pieChart model="#{reporteBean.pieModel}" style="width: 100%; height: 500px;"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-grid">
+        <div class="p-col-12 p-lg-6 p-xl-4">
+            <div class="card">
+                <h5>Número de pruductos publicados por ciudad</h5><br/>
+                <p:polarAreaChart model="#{reporteBean.polarAreaModel}" style="width: 100%; height: 500px;"/>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid">
+        <div class="p-col-12 p-lg-6 p-xl-4">
+            <div class="card">
+                <h5>Calificación promedio de cada producto</h5><br/>
+                <p:donutChart model="#{reporteBean.donutModel}" style="width: 100%; height: 500px;"/>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h5>Total ventas por mes</h5>
+        <p:barChart model="#{reporteBean.hbarModel}" style="width: 100%; height: 500px;" />
+    </div>
+    <div class="card">
+        <p:barChart model="#{reporteBean.barModel}" style="width: 100%; height: 500px;"/>
+    </div>
+
+</ui:define>
+</ui:composition>
+</html>

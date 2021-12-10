@@ -1,5 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
@@ -38,6 +39,7 @@ public class Persona implements Serializable {
 
     @NotBlank(message = "Debe ingresar una contraseña")
     @Column(nullable = false, length = 30)
+    //@JsonIgnore
     private String password;
 
 

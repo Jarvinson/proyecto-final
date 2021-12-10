@@ -38,12 +38,7 @@ public class ProductoServicioImpl implements ProductoServicio  {
     //Función que permite la publicación de un producto
     @Override
     public Producto publicarProducto(Producto producto) throws Exception {
-
-       try {
            return productoRepo.save(producto);
-       }catch (Exception e){
-           throw new Exception(e.getMessage());
-       }
     }
 
     @Override
@@ -142,18 +137,28 @@ public class ProductoServicioImpl implements ProductoServicio  {
     }
 
     @Override
-    public List<Producto> buscarProductoCategoria(String categoriaProducto, String[] filtros) {
+    public List<Producto> buscarProductoCategoria(String categoriaProducto) {
         return productoRepo.buscarProductoCategoria(categoriaProducto);
     }
 
     @Override
-    public List<Producto> buscarProductosPrecio(int precioProducto, String[] filtros) {
-        return productoRepo.buscarProductosPrecio(precioProducto);
+    public List<Producto> productosPorDescuento(double descuento){
+        return productoRepo.productoPorDescuento(descuento);
+    }
+
+    @Override
+    public List<Producto> buscarProductosPrecio(double precio1, double precio2) {
+        return productoRepo.buscarProductosPrecio(precio1, precio2);
     }
 
     @Override
     public List<Producto> listarProductosUsuario(Integer codigo) throws Exception {
         return productoRepo.listarProductosUsuario(codigo);
+    }
+
+    @Override
+    public List<Producto> productosPorCiudad(String nombre) {
+        return productoRepo.productosPorCiudad(nombre);
     }
 
     @Override
